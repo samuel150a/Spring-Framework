@@ -4,7 +4,8 @@ public class Weapon {
 
      Weapon()
     {
-        System.out.println("no-args constructor");
+
+        System.out.println("no-args weapon constructor is running");
     }
 
 

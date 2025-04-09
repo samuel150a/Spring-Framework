@@ -2,11 +2,12 @@ package com.xworkz.internal;
 
 public class Revolver extends Weapon {
 
-    public Revolver ()
+    protected Revolver ()
     {
-        System.out.println("no args  revolver constructor");
+      super();
+        System.out.println("no args  revolver constructor is running");
     }
-    public void Access() {
-        Weapon weapon = new Revolver();
-    }
+
+
+
 }
