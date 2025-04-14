@@ -1,6 +1,7 @@
 package com.samuel.work;
 
-public class DroneHangar {
+public class
+DroneHangar {
     public DroneHangar() {
         System.out.println("Running the DroneHangar constructor");
     }
