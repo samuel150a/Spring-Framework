@@ -1,6 +1,6 @@
 package com.equals.task;
 
-public class LuggageRunner {
+public class RunnerConstructor {
     public static void main(String[] args) {
        Luggage luggage1=new Luggage("puma","red",2,"sam");
         Luggage luggage2=new Luggage("puma","red",2,"sam");
