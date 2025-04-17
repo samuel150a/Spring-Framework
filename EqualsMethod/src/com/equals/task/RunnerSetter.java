@@ -64,5 +64,40 @@ public class RunnerSetter {
         System.out.println("###########################################################################");
 
 
+
+
+        Mobile mobile1=new Mobile();
+        mobile1.setmadein("india");
+        mobile1.setpixel(50);
+        mobile1.setchargerpin("c");
+        mobile1.setcurved(true);
+
+        Mobile mobile2=new Mobile();
+        mobile2.setmadein("india");
+        mobile2.setpixel(50);
+        mobile2.setchargerpin("c");
+        mobile2.setcurved(true);
+
+        Mobile mobile3=new Mobile();
+        mobile3.setmadein("korea");
+        mobile3.setpixel(60);
+        mobile3.setchargerpin("c");
+        mobile3.setcurved(false);
+
+
+        Boolean match2=match1.equals(mobile2);
+        Boolean notmatch2=mobile3.equals(match2);
+        System.out.println("mobile is matched "+ match);
+        System.out.println("mobile is not match "+ notmatch);
+
+        System.out.println(mobile1);
+        System.out.println(mobile2);
+        System.out.println(mobile3);
+
+        System.out.println("###########################################################################");
+
+
+
+
     }
 }
