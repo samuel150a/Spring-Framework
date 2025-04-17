@@ -96,8 +96,35 @@ public class RunnerSetter {
 
         System.out.println("###########################################################################");
 
+        Lamp4 lamp1=new Lamp4();
+        lamp1.setcompany("pih");
+        lamp1.setcost(1120);
+        lamp1.setbrought("amazon");
+        lamp1.setportable(true);
+
+        Lamp4 lamp2=new Lamp4();
+        lamp2.setcompany("pih");
+        lamp2.setcost(1120);
+        lamp2.setbrought("amazon");
+        lamp2.setportable(true);
 
 
+        Lamp4 lamp3=new Lamp4();
+        lamp3.setcompany("h");
+        lamp3.setcost(2000);
+        lamp3.setbrought("flipkart");
+        lamp3.setportable(false);
+
+        boolean match3=lamp1.equals(lamp2);
+        boolean notmatch3=lamp3.equals(lamp2);
+        System.out.println("lamp is matched "+ match);
+        System.out.println("lamp is not match "+ notmatch);
+
+        System.out.println(lamp1);
+        System.out.println(lamp2);
+        System.out.println(lamp3);
+
+        System.out.println("###########################################################################");
 
     }
 }
