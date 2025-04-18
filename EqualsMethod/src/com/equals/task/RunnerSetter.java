@@ -379,5 +379,59 @@ public class RunnerSetter {
         System.out.println(phone3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+        Tv13 tv1 = new Tv13();
+        tv1.setBrand("Sony");
+        tv1.setScreenType("LED");
+        tv1.setSize(55);
+        tv1.setResolution("4K");
+
+        Tv13 tv2 = new Tv13();
+        tv2.setBrand("Sony");
+        tv2.setScreenType("LED");
+        tv2.setSize(55);
+        tv2.setResolution("4K");
+
+        Tv13 tv3 = new Tv13();
+        tv3.setBrand("LG");
+        tv3.setScreenType("OLED");
+        tv3.setSize(65);
+        tv3.setResolution("8K");
+
+        boolean matchTv = tv1.equals(tv2);
+        boolean notMatchTv = tv3.equals(tv2);
+        System.out.println("tv matched: " + matchTv);
+        System.out.println("tv not matched: " + notMatchTv);
+
+        System.out.println(tv1);
+        System.out.println(tv2);
+        System.out.println(tv3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        Speaker14 speaker1 = new Speaker14();
+        speaker1.setBrand("JBL");
+        speaker1.setPowerOutput(40);
+        speaker1.setType("Portable");
+        speaker1.setBluetoothSupport(true);
+
+        Speaker14 speaker2 = new Speaker14();
+        speaker2.setBrand("JBL");
+        speaker2.setPowerOutput(40);
+        speaker2.setType("Portable");
+        speaker2.setBluetoothSupport(true);
+
+        Speaker14 speaker3 = new Speaker14();
+        speaker3.setBrand("Sony");
+        speaker3.setPowerOutput(60);
+        speaker3.setType("Home Theater");
+        speaker3.setBluetoothSupport(false);
+
+        boolean matchSpeaker = speaker1.equals(speaker2);
+        boolean notMatchSpeaker = speaker3.equals(speaker2);
+        System.out.println("speaker matched: " + matchSpeaker);
+        System.out.println("speaker not matched: " + notMatchSpeaker);
+
+        System.out.println(speaker1);
+        System.out.println(speaker2);
+        System.out.println(speaker3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
