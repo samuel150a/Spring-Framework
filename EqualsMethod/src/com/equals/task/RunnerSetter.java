@@ -433,5 +433,35 @@ public class RunnerSetter {
         System.out.println(speaker2);
         System.out.println(speaker3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+
+        Map15 map1 = new Map15();
+        map1.setName("World Map");
+        map1.setRegion("Global");
+        map1.setScale(1000000);
+        map1.setType("Political");
+
+        Map15 map2 = new Map15();
+        map2.setName("World Map");
+        map2.setRegion("Global");
+        map2.setScale(1000000);
+        map2.setType("Political");
+
+        Map15 map3 = new Map15();
+        map3.setName("India Map");
+        map3.setRegion("Asia");
+        map3.setScale(500000);
+        map3.setType("Physical");
+
+        boolean matchMap = map1.equals(map2);
+        boolean notMatchMap = map3.equals(map2);
+        System.out.println("map matched: " + matchMap);
+        System.out.println("map not matched: " + notMatchMap);
+
+        System.out.println(map1);
+        System.out.println(map2);
+        System.out.println(map3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
+
