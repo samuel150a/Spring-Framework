@@ -490,6 +490,33 @@ public class RunnerSetter {
         System.out.println(lays2);
         System.out.println(lays3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        Munch17 munch1 = new Munch17();
+        munch1.setFlavor("Chocolate");
+        munch1.setWeight(12);
+        munch1.setPrice(10);
+        munch1.setWrapperColor("Purple");
+
+        Munch17 munch2 = new Munch17();
+        munch2.setFlavor("Chocolate");
+        munch2.setWeight(12);
+        munch2.setPrice(10);
+        munch2.setWrapperColor("Purple");
+
+        Munch17 munch3 = new Munch17();
+        munch3.setFlavor("Caramel");
+        munch3.setWeight(20);
+        munch3.setPrice(15);
+        munch3.setWrapperColor("Red");
+
+        boolean matchMunch = munch1.equals(munch2);
+        boolean notMatchMunch = munch3.equals(munch2);
+        System.out.println("munch matched: " + matchMunch);
+        System.out.println("munch not matched: " + notMatchMunch);
+
+        System.out.println(munch1);
+        System.out.println(munch2);
+        System.out.println(munch3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
     }
 }
