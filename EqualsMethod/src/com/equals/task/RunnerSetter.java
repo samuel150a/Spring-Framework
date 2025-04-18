@@ -462,6 +462,35 @@ public class RunnerSetter {
         System.out.println(map2);
         System.out.println(map3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Lays16 lays1 = new Lays16();
+        lays1.setFlavor("Classic Salted");
+        lays1.setWeight(50);
+        lays1.setPrice(20);
+        lays1.setPackType("Pouch");
+
+        Lays16 lays2 = new Lays16();
+        lays2.setFlavor("Classic Salted");
+        lays2.setWeight(50);
+        lays2.setPrice(20);
+        lays2.setPackType("Pouch");
+
+        Lays16 lays3 = new Lays16();
+        lays3.setFlavor("Magic Masala");
+        lays3.setWeight(90);
+        lays3.setPrice(30);
+        lays3.setPackType("Canister");
+
+        boolean matchLays = lays1.equals(lays2);
+        boolean notMatchLays = lays3.equals(lays2);
+        System.out.println("lays matched: " + matchLays);
+        System.out.println("lays not matched: " + notMatchLays);
+
+        System.out.println(lays1);
+        System.out.println(lays2);
+        System.out.println(lays3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
