@@ -69,5 +69,23 @@ public class RunnerConstructor {
         System.out.println(fan3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        Screen5 screen1 = new Screen5("Samsung", "32inch", "1080p", "Ajay");
+        Screen5 screen2 = new Screen5("Samsung", "32inch", "1080p", "Ajay");
+        Screen5 screen3 = new Screen5("LG", "27inch", "4K", "Sneha");
+
+        boolean match4 = screen1.equals(screen2);
+        boolean notmatch4 = screen3.equals(screen2);
+
+        System.out.println("screen matched " + match4);
+        System.out.println("screen not matched " + notmatch4);
+
+        System.out.println(screen1);
+        System.out.println(screen2);
+        System.out.println(screen3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
     }
 }
