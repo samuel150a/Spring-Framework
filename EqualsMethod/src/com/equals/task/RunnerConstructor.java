@@ -186,5 +186,21 @@ public class RunnerConstructor {
         System.out.println(locket3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        Horlicks12 horlicks1 = new Horlicks12("Horlicks", "Chocolate", 500, "Rahul");
+        Horlicks12 horlicks2 = new Horlicks12("Horlicks", "Chocolate", 500, "Rahul");
+        Horlicks12 horlicks3 = new Horlicks12("Bovonto", "Vanilla", 400, "Priya");
+
+        boolean match11 = horlicks1.equals(horlicks2);
+        boolean notmatch11 = horlicks3.equals(horlicks2);
+
+        System.out.println("horlicks matched " + match11);
+        System.out.println("horlicks not matched " + notmatch11);
+
+        System.out.println(horlicks1);
+        System.out.println(horlicks2);
+        System.out.println(horlicks3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
     }
 }
