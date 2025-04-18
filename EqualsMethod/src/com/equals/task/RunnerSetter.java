@@ -323,6 +323,32 @@ public class RunnerSetter {
         System.out.println(drone2);
         System.out.println(drone3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        Dvd12 dvd1 = new Dvd12();
+        dvd1.setTitle("Inception");
+        dvd1.setGenre("Sci-Fi");
+        dvd1.setDuration(148);
+        dvd1.setLanguage("English");
 
+        Dvd12 dvd2 = new Dvd12();
+        dvd2.setTitle("Inception");
+        dvd2.setGenre("Sci-Fi");
+        dvd2.setDuration(148);
+        dvd2.setLanguage("English");
+
+        Dvd12 dvd3 = new Dvd12();
+        dvd3.setTitle("Bahubali");
+        dvd3.setGenre("Action");
+        dvd3.setDuration(160);
+        dvd3.setLanguage("Telugu");
+
+        boolean match12 = dvd1.equals(dvd2);
+        boolean notmatch12 = dvd3.equals(dvd2);
+        System.out.println("dvd matched: " + match12);
+        System.out.println("dvd not matched: " + notmatch12);
+
+        System.out.println(dvd1);
+        System.out.println(dvd2);
+        System.out.println(dvd3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
