@@ -296,5 +296,33 @@ public class RunnerSetter {
         System.out.println(sensor3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+        Drone11 drone1 = new Drone11();
+        drone1.setModel("Phantom 4");
+        drone1.setBrand("DJI");
+        drone1.setFlightTime(30);
+        drone1.setCameraQuality("4K");
+
+        Drone11 drone2 = new Drone11();
+        drone2.setModel("Phantom 4");
+        drone2.setBrand("DJI");
+        drone2.setFlightTime(30);
+        drone2.setCameraQuality("4K");
+
+        Drone11 drone3 = new Drone11();
+        drone3.setModel("Mavic Mini");
+        drone3.setBrand("DJI");
+        drone3.setFlightTime(20);
+        drone3.setCameraQuality("2.7K");
+
+        boolean match11 = drone1.equals(drone2);
+        boolean notmatch11 = drone3.equals(drone2);
+        System.out.println("drone matched: " + match11);
+        System.out.println("drone not matched: " + notmatch11);
+
+        System.out.println(drone1);
+        System.out.println(drone2);
+        System.out.println(drone3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
