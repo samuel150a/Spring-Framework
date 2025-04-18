@@ -363,8 +363,25 @@ public class RunnerConstructor {
         System.out.println(motherboard3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        GraphicsCard23 card1 = new GraphicsCard23("NVIDIA", "RTX 3060", 12, "David");
+        GraphicsCard23 card2 = new GraphicsCard23("NVIDIA", "RTX 3060", 12, "David");
+        GraphicsCard23 card3 = new GraphicsCard23("AMD", "RX 6800", 16, "Sophia");
+
+        boolean match22 = card1.equals(card2);
+        boolean notmatch22 = card3.equals(card2);
+
+        System.out.println("graphics card matched " + match22);
+        System.out.println("graphics card not matched " + notmatch22);
+
+        System.out.println(card1);
+        System.out.println(card2);
+        System.out.println(card3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
-}
+
+    }
+
 
 
 
