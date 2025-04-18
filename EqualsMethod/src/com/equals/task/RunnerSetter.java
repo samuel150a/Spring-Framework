@@ -125,6 +125,32 @@ public class RunnerSetter {
         System.out.println(lamp3);
 
         System.out.println("###########################################################################");
+        Furniture5 furniture1 = new Furniture5();
+        furniture1.setMaterial("Wood");
+        furniture1.setColor("Brown");
+        furniture1.setPrice(5000);
+        furniture1.setType("Chair");
 
+        Furniture5 furniture2 = new Furniture5();
+        furniture2.setMaterial("Wood");
+        furniture2.setColor("Brown");
+        furniture2.setPrice(5000);
+        furniture2.setType("Chair");
+
+        Furniture5 furniture3 = new Furniture5();
+        furniture3.setMaterial("Metal");
+        furniture3.setColor("Black");
+        furniture3.setPrice(7000);
+        furniture3.setType("Table");
+
+        boolean match5 = furniture1.equals(furniture2);
+        boolean notmatch5 = furniture3.equals(furniture2);
+        System.out.println("furniture matched: " + match5);
+        System.out.println("furniture not matched: " + notmatch5);
+
+        System.out.println(furniture1);
+        System.out.println(furniture2);
+        System.out.println(furniture3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
