@@ -235,5 +235,40 @@ public class RunnerConstructor {
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
+
+        ChiliPowder15 chili1 = new ChiliPowder15("MDH", "Kashmiri", 250, "Vijay");
+        ChiliPowder15 chili2 = new ChiliPowder15("MDH", "Kashmiri", 250, "Vijay");
+        ChiliPowder15 chili3 = new ChiliPowder15("Everest", "Byadgi", 500, "Neha");
+
+        boolean match14 = chili1.equals(chili2);
+        boolean notmatch14 = chili3.equals(chili2);
+
+        System.out.println("chili powder matched " + match14);
+        System.out.println("chili powder not matched " + notmatch14);
+
+        System.out.println(chili1);
+        System.out.println(chili2);
+        System.out.println(chili3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        WashingMachine16 machine1 = new WashingMachine16("LG", "Front Load", 7, "Anil");
+        WashingMachine16 machine2 = new WashingMachine16("LG", "Front Load", 7, "Anil");
+        WashingMachine16 machine3 = new WashingMachine16("Samsung", "Top Load", 8, "Ravi");
+
+        boolean match15 = machine1.equals(machine2);
+        boolean notmatch15 = machine3.equals(machine2);
+
+        System.out.println("washing machine matched " + match15);
+        System.out.println("washing machine not matched " + notmatch15);
+
+        System.out.println(machine1);
+        System.out.println(machine2);
+        System.out.println(machine3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
+
+
+
+
