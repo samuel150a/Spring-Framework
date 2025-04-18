@@ -179,5 +179,35 @@ public class RunnerSetter {
         System.out.println(zip2);
         System.out.println(zip3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+
+        Bluetooth7 bluetooth1 = new Bluetooth7();
+        bluetooth1.setBrand("Boat");
+        bluetooth1.setColor("Black");
+        bluetooth1.setVersion(5);
+        bluetooth1.setType("Wireless");
+
+        Bluetooth7 bluetooth2 = new Bluetooth7();
+        bluetooth2.setBrand("Boat");
+        bluetooth2.setColor("Black");
+        bluetooth2.setVersion(5);
+        bluetooth2.setType("Wireless");
+
+        Bluetooth7 bluetooth3 = new Bluetooth7();
+        bluetooth3.setBrand("JBL");
+        bluetooth3.setColor("Blue");
+        bluetooth3.setVersion(4);
+        bluetooth3.setType("Wired");
+
+        boolean match7 = bluetooth1.equals(bluetooth2);
+        boolean notmatch7 = bluetooth3.equals(bluetooth2);
+        System.out.println("bluetooth matched: " + match7);
+        System.out.println("bluetooth not matched: " + notmatch7);
+
+        System.out.println(bluetooth1);
+        System.out.println(bluetooth2);
+        System.out.println(bluetooth3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
