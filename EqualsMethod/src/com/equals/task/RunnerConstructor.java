@@ -330,8 +330,26 @@ public class RunnerConstructor {
         System.out.println(river3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+        Pendrive21 pendrive1 = new Pendrive21("SanDisk", "64GB", "USB 3.0", "John");
+        Pendrive21 pendrive2 = new Pendrive21("SanDisk", "64GB", "USB 3.0", "John");
+        Pendrive21 pendrive3 = new Pendrive21("Kingston", "128GB", "USB 3.1", "Alice");
+
+        boolean match20 = pendrive1.equals(pendrive2);
+        boolean notmatch20 = pendrive3.equals(pendrive2);
+
+        System.out.println("pendrive matched " + match20);
+        System.out.println("pendrive not matched " + notmatch20);
+
+        System.out.println(pendrive1);
+        System.out.println(pendrive2);
+        System.out.println(pendrive3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
+
 
 
 
