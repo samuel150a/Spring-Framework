@@ -152,5 +152,32 @@ public class RunnerSetter {
         System.out.println(furniture2);
         System.out.println(furniture3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        Zip6 zip1 = new Zip6();
+        zip1.setBrand("YKK");
+        zip1.setColor("Black");
+        zip1.setSize(10);
+        zip1.setType("Plastic");
+
+        Zip6 zip2 = new Zip6();
+        zip2.setBrand("YKK");
+        zip2.setColor("Black");
+        zip2.setSize(10);
+        zip2.setType("Plastic");
+
+        Zip6 zip3 = new Zip6();
+        zip3.setBrand("SBS");
+        zip3.setColor("Silver");
+        zip3.setSize(8);
+        zip3.setType("Metal");
+
+        boolean match6 = zip1.equals(zip2);
+        boolean notmatch6 = zip3.equals(zip2);
+        System.out.println("zip matched: " + match6);
+        System.out.println("zip not matched: " + notmatch6);
+
+        System.out.println(zip1);
+        System.out.println(zip2);
+        System.out.println(zip3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
