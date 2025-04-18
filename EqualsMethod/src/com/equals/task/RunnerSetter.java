@@ -350,5 +350,34 @@ public class RunnerSetter {
         System.out.println(dvd2);
         System.out.println(dvd3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Phone13 phone1 = new Phone13();
+        phone1.setBrand("Samsung");
+        phone1.setModel("Galaxy S22");
+        phone1.setRam(8);
+        phone1.setOs("Android");
+
+        Phone13 phone2 = new Phone13();
+        phone2.setBrand("Samsung");
+        phone2.setModel("Galaxy S22");
+        phone2.setRam(8);
+        phone2.setOs("Android");
+
+        Phone13 phone3 = new Phone13();
+        phone3.setBrand("Apple");
+        phone3.setModel("iPhone 13");
+        phone3.setRam(6);
+        phone3.setOs("iOS");
+
+        boolean match13 = phone1.equals(phone2);
+        boolean notmatch13 = phone3.equals(phone2);
+        System.out.println("phone matched: " + match13);
+        System.out.println("phone not matched: " + notmatch13);
+
+        System.out.println(phone1);
+        System.out.println(phone2);
+        System.out.println(phone3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
