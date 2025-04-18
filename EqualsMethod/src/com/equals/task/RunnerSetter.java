@@ -237,5 +237,34 @@ public class RunnerSetter {
         System.out.println(resistor2);
         System.out.println(resistor3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+
+        Battery9 battery1 = new Battery9();
+        battery1.setBrand("Duracell");
+        battery1.setType("AA");
+        battery1.setCapacity(2500);
+        battery1.setVoltage("1.5V");
+
+        Battery9 battery2 = new Battery9();
+        battery2.setBrand("Duracell");
+        battery2.setType("AA");
+        battery2.setCapacity(2500);
+        battery2.setVoltage("1.5V");
+
+        Battery9 battery3 = new Battery9();
+        battery3.setBrand("Energizer");
+        battery3.setType("AAA");
+        battery3.setCapacity(1000);
+        battery3.setVoltage("1.2V");
+
+        boolean match9 = battery1.equals(battery2);
+        boolean notmatch9 = battery3.equals(battery2);
+        System.out.println("battery matched: " + match9);
+        System.out.println("battery not matched: " + notmatch9);
+
+        System.out.println(battery1);
+        System.out.println(battery2);
+        System.out.println(battery3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
