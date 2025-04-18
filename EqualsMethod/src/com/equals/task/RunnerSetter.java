@@ -266,5 +266,35 @@ public class RunnerSetter {
         System.out.println(battery2);
         System.out.println(battery3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+
+        Sensor10 sensor1 = new Sensor10();
+        sensor1.setName("DHT11");
+        sensor1.setCategory("Temperature");
+        sensor1.setRange(50);
+        sensor1.setUnit("Celsius");
+
+        Sensor10 sensor2 = new Sensor10();
+        sensor2.setName("DHT11");
+        sensor2.setCategory("Temperature");
+        sensor2.setRange(50);
+        sensor2.setUnit("Celsius");
+
+        Sensor10 sensor3 = new Sensor10();
+        sensor3.setName("MQ2");
+        sensor3.setCategory("Gas");
+        sensor3.setRange(100);
+        sensor3.setUnit("PPM");
+
+        boolean match10 = sensor1.equals(sensor2);
+        boolean notmatch10 = sensor3.equals(sensor2);
+        System.out.println("sensor matched: " + match10);
+        System.out.println("sensor not matched: " + notmatch10);
+
+        System.out.println(sensor1);
+        System.out.println(sensor2);
+        System.out.println(sensor3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
