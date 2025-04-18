@@ -136,5 +136,23 @@ public class RunnerConstructor {
         System.out.println(mouse3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+
+        Jacket9 jacket1 = new Jacket9("Nike", "Black", "M", "Sanjay");
+        Jacket9 jacket2 = new Jacket9("Nike", "Black", "M", "Sanjay");
+        Jacket9 jacket3 = new Jacket9("Adidas", "Blue", "L", "Meera");
+
+        boolean match8 = jacket1.equals(jacket2);
+        boolean notmatch8 = jacket3.equals(jacket2);
+
+        System.out.println("jacket matched " + match8);
+        System.out.println("jacket not matched " + notmatch8);
+
+        System.out.println(jacket1);
+        System.out.println(jacket2);
+        System.out.println(jacket3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
