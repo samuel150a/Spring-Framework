@@ -347,6 +347,22 @@ public class RunnerConstructor {
         System.out.println(pendrive3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        Motherboard22 motherboard1 = new Motherboard22("ASUS", "Z590", "ATX", "Mark");
+        Motherboard22 motherboard2 = new Motherboard22("ASUS", "Z590", "ATX", "Mark");
+        Motherboard22 motherboard3 = new Motherboard22("Gigabyte", "B450", "Micro ATX", "John");
+
+        boolean match21 = motherboard1.equals(motherboard2);
+        boolean notmatch21 = motherboard3.equals(motherboard2);
+
+        System.out.println("motherboard matched " + match21);
+        System.out.println("motherboard not matched " + notmatch21);
+
+        System.out.println(motherboard1);
+        System.out.println(motherboard2);
+        System.out.println(motherboard3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
 
