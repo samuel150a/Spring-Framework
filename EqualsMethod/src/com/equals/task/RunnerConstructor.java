@@ -1,7 +1,8 @@
 package com.equals.task;
 
 public class RunnerConstructor {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
        Luggage luggage1=new Luggage("puma","red",2,"sam");
         Luggage luggage2=new Luggage("puma","red",2,"sam");
         Luggage luggage3=new Luggage("bolt","black",3,"Alice");
@@ -282,6 +283,39 @@ public class RunnerConstructor {
         System.out.println(fryPan3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        Blender18 blender1 = new Blender18("Philips", "Stainless Steel", 600, "Alice");
+        Blender18 blender2 = new Blender18("Philips", "Stainless Steel", 600, "Alice");
+        Blender18 blender3 = new Blender18("Bosch", "Titanium", 800, "Bob");
+
+        boolean match17 = blender1.equals(blender2);
+        boolean notmatch17 = blender3.equals(blender2);
+
+        System.out.println("Blender matched " + match17);
+        System.out.println("Blender not matched " + notmatch17);
+
+        System.out.println(blender1);
+        System.out.println(blender2);
+        System.out.println(blender3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        Sea19 sea1 = new Sea19("Ocean", "Pacific", 1000, "Dr. Smith");
+        Sea19 sea2 = new Sea19("Ocean", "Pacific", 1000, "Dr. Smith");
+        Sea19 sea3 = new Sea19("Sea", "Mediterranean", 500, "Dr. John");
+
+        boolean match18= sea1.equals(sea2);
+        boolean notmatch18 = sea3.equals(sea2);
+
+        System.out.println("sea matched " + match18);
+        System.out.println("sea not matched " + notmatch18);
+
+        System.out.println(sea1);
+        System.out.println(sea2);
+        System.out.println(sea3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
     }
 }
 
