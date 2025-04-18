@@ -53,5 +53,21 @@ public class RunnerConstructor {
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
+
+        Fan4 fan1 = new Fan4("Usha", "White", 1200, "Ravi");
+        Fan4 fan2 = new Fan4("Usha", "White", 1200, "Ravi");
+        Fan4 fan3 = new Fan4("Havells", "Brown", 1000, "Kiran");
+
+        boolean match3 = fan1.equals(fan2);
+        boolean notmatch3 = fan3.equals(fan2);
+
+        System.out.println("fan matched " + match3);
+        System.out.println("fan not matched " + notmatch3);
+
+        System.out.println(fan1);
+        System.out.println(fan2);
+        System.out.println(fan3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
