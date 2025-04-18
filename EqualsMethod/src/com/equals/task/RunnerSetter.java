@@ -209,5 +209,33 @@ public class RunnerSetter {
         System.out.println(bluetooth3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+
+        Resistor8 resistor1 = new Resistor8();
+        resistor1.setMaterial("Carbon");
+        resistor1.setColorCode("Brown-Black-Red");
+        resistor1.setResistance(1000);
+        resistor1.setType("Fixed");
+
+        Resistor8 resistor2 = new Resistor8();
+        resistor2.setMaterial("Carbon");
+        resistor2.setColorCode("Brown-Black-Red");
+        resistor2.setResistance(1000);
+        resistor2.setType("Fixed");
+
+        Resistor8 resistor3 = new Resistor8();
+        resistor3.setMaterial("Metal");
+        resistor3.setColorCode("Red-Red-Orange");
+        resistor3.setResistance(22000);
+        resistor3.setType("Variable");
+
+        boolean match8 = resistor1.equals(resistor2);
+        boolean notmatch8 = resistor3.equals(resistor2);
+        System.out.println("resistor matched: " + match8);
+        System.out.println("resistor not matched: " + notmatch8);
+
+        System.out.println(resistor1);
+        System.out.println(resistor2);
+        System.out.println(resistor3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
