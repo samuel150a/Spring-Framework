@@ -100,6 +100,41 @@ public class RunnerConstructor {
         System.out.println(bottle2);
         System.out.println(bottle3);
 
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+
+        Microscope7 micro1 = new Microscope7("Olympus", "Compound", 1000, "Dr. Arjun");
+        Microscope7 micro2 = new Microscope7("Olympus", "Compound", 1000, "Dr. Arjun");
+        Microscope7 micro3 = new Microscope7("Nikon", "Stereo", 400, "Dr. Priya");
+
+        boolean match6= micro1.equals(micro2);
+        boolean notmatch6 = micro3.equals(micro2);
+
+        System.out.println("microscope matched " + match6);
+        System.out.println("microscope not matched " + notmatch6);
+
+        System.out.println(micro1);
+        System.out.println(micro2);
+        System.out.println(micro3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        Mouse8 mouse1 = new Mouse8("Logitech", "Wireless", 1600, "Vikram");
+        Mouse8 mouse2 = new Mouse8("Logitech", "Wireless", 1600, "Vikram");
+        Mouse8 mouse3 = new Mouse8("HP", "Wired", 1000, "Sneha");
+
+        boolean match7 = mouse1.equals(mouse2);
+        boolean notmatch7 = mouse3.equals(mouse2);
+
+        System.out.println("mouse matched " + match7);
+        System.out.println("mouse not matched " + notmatch7);
+
+        System.out.println(mouse1);
+        System.out.println(mouse2);
+        System.out.println(mouse3);
+
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
