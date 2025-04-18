@@ -86,6 +86,20 @@ public class RunnerConstructor {
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
+        Bottle6 bottle1 = new Bottle6("Milton", "Blue", 1000, "Anu");
+        Bottle6 bottle2 = new Bottle6("Milton", "Blue", 1000, "Anu");
+        Bottle6 bottle3 = new Bottle6("Cello", "Red", 750, "Rahul");
 
+        boolean match5 = bottle1.equals(bottle2);
+        boolean notmatch5 = bottle3.equals(bottle2);
+
+        System.out.println("bottle matched " + match5);
+        System.out.println("bottle not matched " + notmatch5);
+
+        System.out.println(bottle1);
+        System.out.println(bottle2);
+        System.out.println(bottle3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
