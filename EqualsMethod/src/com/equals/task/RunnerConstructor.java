@@ -202,5 +202,38 @@ public class RunnerConstructor {
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
+
+        WheyProtein13 protein1 = new WheyProtein13("MyProtein", "Chocolate", 1000, "Arvind");
+        WheyProtein13 protein2 = new WheyProtein13("MyProtein", "Chocolate", 1000, "Arvind");
+        WheyProtein13 protein3 = new WheyProtein13("Optimum Nutrition", "Vanilla", 1200, "Raj");
+
+        boolean match12 = protein1.equals(protein2);
+        boolean notmatch12 = protein3.equals(protein2);
+
+        System.out.println("whey protein matched " + match12);
+        System.out.println("whey protein not matched " + notmatch12);
+
+        System.out.println(protein1);
+        System.out.println(protein2);
+        System.out.println(protein3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        TeaPowder14 tea1 = new TeaPowder14("Tata", "Masala", 500, "Suresh");
+        TeaPowder14 tea2 = new TeaPowder14("Tata", "Masala", 500, "Suresh");
+        TeaPowder14 tea3 = new TeaPowder14("Tetley", "Lemon", 400, "Maya");
+
+        boolean match13 = tea1.equals(tea2);
+        boolean notmatch13 = tea3.equals(tea2);
+
+        System.out.println("tea powder matched " + match13);
+        System.out.println("tea powder not matched " + notmatch13);
+
+        System.out.println(tea1);
+        System.out.println(tea2);
+        System.out.println(tea3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
     }
 }
