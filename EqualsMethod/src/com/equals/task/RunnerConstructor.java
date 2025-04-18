@@ -154,5 +154,22 @@ public class RunnerConstructor {
         System.out.println(jacket3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        LED10 led1 = new LED10("Samsung", "42 inch", "4K", "John");
+        LED10 led2 = new LED10("Samsung", "42 inch", "4K", "John");
+        LED10 led3 = new LED10("LG", "55 inch", "Full HD", "Sara");
+
+        boolean match9 = led1.equals(led2);
+        boolean notmatch9 = led3.equals(led2);
+
+        System.out.println("led matched " + match9);
+        System.out.println("led not matched " + notmatch9);
+
+        System.out.println(led1);
+        System.out.println(led2);
+        System.out.println(led3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
     }
 }
