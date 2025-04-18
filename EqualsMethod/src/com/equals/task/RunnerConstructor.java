@@ -266,6 +266,22 @@ public class RunnerConstructor {
         System.out.println(machine3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+        FryPan17 fryPan1 = new FryPan17("Prestige", "Non-stick", 28, "Sita");
+        FryPan17 fryPan2 = new FryPan17("Prestige", "Non-stick", 28, "Sita");
+        FryPan17 fryPan3 = new FryPan17("Tefal", "Cast Iron", 30, "Ravi");
+
+        boolean match16 = fryPan1.equals(fryPan2);
+        boolean notmatch16 = fryPan3.equals(fryPan2);
+
+        System.out.println("fry pan matched " + match16);
+        System.out.println("fry pan not matched " + notmatch16);
+
+        System.out.println(fryPan1);
+        System.out.println(fryPan2);
+        System.out.println(fryPan3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
 
