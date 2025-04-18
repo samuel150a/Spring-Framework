@@ -315,7 +315,21 @@ public class RunnerConstructor {
         System.out.println(sea3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        River20 river1 = new River20("Amazon", "7050 km", "Andes", "South America");
+        River20 river2 = new River20("Amazon", "7050 km", "Andes", "South America");
+        River20 river3 = new River20("Nile", "6650 km", "Great Lakes", "Africa");
 
+        boolean match19 = river1.equals(river2);
+        boolean notmatch19 = river3.equals(river2);
+
+        System.out.println("river matched " + match19);
+        System.out.println("river not matched " + notmatch19);
+
+        System.out.println(river1);
+        System.out.println(river2);
+        System.out.println(river3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
 
