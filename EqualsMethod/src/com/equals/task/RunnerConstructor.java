@@ -378,6 +378,40 @@ public class RunnerConstructor {
         System.out.println(card3);
 
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+        Processor24 processor1 = new Processor24("Intel", "i7-12700K", 12, "Emma");
+        Processor24 processor2 = new Processor24("Intel", "i7-12700K", 12, "Emma");
+        Processor24 processor3 = new Processor24("AMD", "Ryzen 7 5800X", 8, "Liam");
+
+        boolean match23 = processor1.equals(processor2);
+        boolean notmatch23 = processor3.equals(processor2);
+
+        System.out.println("processor matched " + match23);
+        System.out.println("processor not matched " + notmatch23);
+
+        System.out.println(processor1);
+        System.out.println(processor2);
+        System.out.println(processor3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+        Monitor25 monitor1 = new Monitor25("Dell", "27 inch", "2560x1440", "Ava");
+        Monitor25 monitor2 = new Monitor25("Dell", "27 inch", "2560x1440", "Ava");
+        Monitor25 monitor3 = new Monitor25("LG", "24 inch", "1920x1080", "Noah");
+
+        boolean match24 = monitor1.equals(monitor2);
+        boolean notmatch24 = monitor3.equals(monitor2);
+
+        System.out.println("monitor matched " + match24);
+        System.out.println("monitor not matched " + notmatch24);
+
+        System.out.println(monitor1);
+        System.out.println(monitor2);
+        System.out.println(monitor3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 
     }
