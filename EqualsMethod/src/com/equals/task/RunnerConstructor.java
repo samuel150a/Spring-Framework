@@ -171,5 +171,20 @@ public class RunnerConstructor {
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
 
+        Locket11 locket1 = new Locket11("Tanishq", "Gold", "Heart", "Anita");
+        Locket11 locket2 = new Locket11("Tanishq", "Gold", "Heart", "Anita");
+        Locket11 locket3 = new Locket11("Kalyan", "Silver", "Round", "Priya");
+
+        boolean match10 = locket1.equals(locket2);
+        boolean notmatch10 = locket3.equals(locket2);
+
+        System.out.println("locket matched " + match10);
+        System.out.println("locket not matched " + notmatch10);
+
+        System.out.println(locket1);
+        System.out.println(locket2);
+        System.out.println(locket3);
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     }
 }
