@@ -659,6 +659,33 @@ public class RunnerSetter {
         System.out.println(intel3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+        Ryzen23 ryzen1 = new Ryzen23();
+        ryzen1.setModel("Ryzen 5 5600X");
+        ryzen1.setCores(6);
+        ryzen1.setThreads(12);
+        ryzen1.setBaseClock(3.7);
+
+        Ryzen23 ryzen2 = new Ryzen23();
+        ryzen2.setModel("Ryzen 5 5600X");
+        ryzen2.setCores(6);
+        ryzen2.setThreads(12);
+        ryzen2.setBaseClock(3.7);
+
+        Ryzen23 ryzen3 = new Ryzen23();
+        ryzen3.setModel("Ryzen 7 5800X");
+        ryzen3.setCores(8);
+        ryzen3.setThreads(16);
+        ryzen3.setBaseClock(3.8);
+
+        boolean match23 = ryzen1.equals(ryzen2);
+        boolean notMatch23 = ryzen3.equals(ryzen2);
+        System.out.println("ryzen matched: " + match23);
+        System.out.println("ryzen not matched: " + notMatch23);
+
+        System.out.println(ryzen1);
+        System.out.println(ryzen2);
+        System.out.println(ryzen3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
 
