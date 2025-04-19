@@ -715,6 +715,34 @@ public class RunnerSetter {
         System.out.println(gpu3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+        SSD25 ssd1 = new SSD25();
+        ssd1.setBrand("WD");
+        ssd1.setCapacity(1000);
+        ssd1.setType("NVMe");
+        ssd1.setWriteSpeed(3200);
+
+        SSD25 ssd2 = new SSD25();
+        ssd2.setBrand("WD");
+        ssd2.setCapacity(1000);
+        ssd2.setType("NVMe");
+        ssd2.setWriteSpeed(3200);
+
+        SSD25 ssd3 = new SSD25();
+        ssd3.setBrand("Kingston");
+        ssd3.setCapacity(500);
+        ssd3.setType("SATA");
+        ssd3.setWriteSpeed(500);
+
+        boolean match25 = ssd1.equals(ssd2);
+        boolean notMatch25 = ssd3.equals(ssd2);
+        System.out.println("ssd matched: " + match25);
+        System.out.println("ssd not matched: " + notMatch25);
+
+        System.out.println(ssd1);
+        System.out.println(ssd2);
+        System.out.println(ssd3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
