@@ -518,6 +518,34 @@ public class RunnerSetter {
         System.out.println(munch3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+
+        Diode18 diode1 = new Diode18();
+        diode1.setType("Zener");
+        diode1.setVoltage(5);
+        diode1.setCurrentRating(0.5);
+        diode1.setPackageType("DO-41");
+
+        Diode18 diode2 = new Diode18();
+        diode2.setType("Zener");
+        diode2.setVoltage(5);
+        diode2.setCurrentRating(0.5);
+        diode2.setPackageType("DO-41");
+
+        Diode18 diode3 = new Diode18();
+        diode3.setType("Schottky");
+        diode3.setVoltage(3);
+        diode3.setCurrentRating(1.0);
+        diode3.setPackageType("SMA");
+
+        boolean matchDiode = diode1.equals(diode2);
+        boolean notMatchDiode = diode3.equals(diode2);
+        System.out.println("diode matched: " + matchDiode);
+        System.out.println("diode not matched: " + notMatchDiode);
+
+        System.out.println(diode1);
+        System.out.println(diode2);
+        System.out.println(diode3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
 
