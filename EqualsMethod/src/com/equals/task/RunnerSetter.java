@@ -574,6 +574,36 @@ public class RunnerSetter {
         System.out.println(fuse2);
         System.out.println(fuse3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Tire20 tire1 = new Tire20();
+        tire1.setBrand("Michelin");
+        tire1.setSize("225/45R17");
+        tire1.setType("All-Season");
+        tire1.setPrice(150);
+
+        Tire20 tire2 = new Tire20();
+        tire2.setBrand("Michelin");
+        tire2.setSize("225/45R17");
+        tire2.setType("All-Season");
+        tire2.setPrice(150);
+
+        Tire20 tire3 = new Tire20();
+        tire3.setBrand("Bridgestone");
+        tire3.setSize("205/55R16");
+        tire3.setType("Summer");
+        tire3.setPrice(120);
+
+        boolean match20 = tire1.equals(tire2);
+        boolean notMatch20 = tire3.equals(tire2);
+        System.out.println("tire matched: " + match20);
+        System.out.println("tire not matched: " + notMatch20);
+
+        System.out.println(tire1);
+        System.out.println(tire2);
+        System.out.println(tire3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+
     }
 }
 
