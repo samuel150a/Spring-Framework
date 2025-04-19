@@ -603,7 +603,33 @@ public class RunnerSetter {
         System.out.println(tire3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+        Processor21 proc1 = new Processor21();
+        proc1.setBrand("Intel");
+        proc1.setModel("i7-10700K");
+        proc1.setCores(8);
+        proc1.setFrequency(3.8);
 
+        Processor21 proc2 = new Processor21();
+        proc2.setBrand("Intel");
+        proc2.setModel("i7-10700K");
+        proc2.setCores(8);
+        proc2.setFrequency(3.8);
+
+        Processor21 proc3 = new Processor21();
+        proc3.setBrand("AMD");
+        proc3.setModel("Ryzen 5 3600");
+        proc3.setCores(6);
+        proc3.setFrequency(3.6);
+
+        boolean match21 = proc1.equals(proc2);
+        boolean notMatch21 = proc3.equals(proc2);
+        System.out.println("processor matched: " + match21);
+        System.out.println("processor not matched: " + notMatch21);
+
+        System.out.println(proc1);
+        System.out.println(proc2);
+        System.out.println(proc3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
 
