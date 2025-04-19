@@ -769,6 +769,35 @@ public class RunnerSetter {
         System.out.println(cooler2);
         System.out.println(cooler3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Nodemcu27 node1 = new Nodemcu27();
+        node1.setModel("ESP8266");
+        node1.setChip("ESP-12E");
+        node1.setGpioPins(11);
+        node1.setWifiSupport(true);
+
+        Nodemcu27 node2 = new Nodemcu27();
+        node2.setModel("ESP8266");
+        node2.setChip("ESP-12E");
+        node2.setGpioPins(11);
+        node2.setWifiSupport(true);
+
+        Nodemcu27 node3 = new Nodemcu27();
+        node3.setModel("ESP32");
+        node3.setChip("ESP32-WROOM");
+        node3.setGpioPins(30);
+        node3.setWifiSupport(true);
+
+        boolean match27 = node1.equals(node2);
+        boolean notMatch27 = node3.equals(node2);
+        System.out.println("nodemcu matched: " + match27);
+        System.out.println("nodemcu not matched: " + notMatch27);
+
+        System.out.println(node1);
+        System.out.println(node2);
+        System.out.println(node3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
