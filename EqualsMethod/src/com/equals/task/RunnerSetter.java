@@ -686,6 +686,35 @@ public class RunnerSetter {
         System.out.println(ryzen2);
         System.out.println(ryzen3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Nvidia24 gpu1 = new Nvidia24();
+        gpu1.setModel("RTX 3060");
+        gpu1.setMemory(12);
+        gpu1.setSeries("RTX 30");
+        gpu1.setClockSpeed(1.78);
+
+        Nvidia24 gpu2 = new Nvidia24();
+        gpu2.setModel("RTX 3060");
+        gpu2.setMemory(12);
+        gpu2.setSeries("RTX 30");
+        gpu2.setClockSpeed(1.78);
+
+        Nvidia24 gpu3 = new Nvidia24();
+        gpu3.setModel("RTX 3080");
+        gpu3.setMemory(10);
+        gpu3.setSeries("RTX 30");
+        gpu3.setClockSpeed(1.71);
+
+        boolean match24 = gpu1.equals(gpu2);
+        boolean notMatch24 = gpu3.equals(gpu2);
+        System.out.println("nvidia matched: " + match24);
+        System.out.println("nvidia not matched: " + notMatch24);
+
+        System.out.println(gpu1);
+        System.out.println(gpu2);
+        System.out.println(gpu3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
