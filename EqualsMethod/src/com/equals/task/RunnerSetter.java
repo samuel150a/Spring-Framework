@@ -742,7 +742,33 @@ public class RunnerSetter {
         System.out.println(ssd2);
         System.out.println(ssd3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        GpuCooler26 cooler1 = new GpuCooler26();
+        cooler1.setBrand("Cooler Master");
+        cooler1.setType("Air");
+        cooler1.setFanCount(2);
+        cooler1.setNoiseLevel(24.5);
 
+        GpuCooler26 cooler2 = new GpuCooler26();
+        cooler2.setBrand("Cooler Master");
+        cooler2.setType("Air");
+        cooler2.setFanCount(2);
+        cooler2.setNoiseLevel(24.5);
+
+        GpuCooler26 cooler3 = new GpuCooler26();
+        cooler3.setBrand("Noctua");
+        cooler3.setType("Liquid");
+        cooler3.setFanCount(1);
+        cooler3.setNoiseLevel(18.0);
+
+        boolean match26 = cooler1.equals(cooler2);
+        boolean notMatch26 = cooler3.equals(cooler2);
+        System.out.println("gpucooler matched: " + match26);
+        System.out.println("gpucooler not matched: " + notMatch26);
+
+        System.out.println(cooler1);
+        System.out.println(cooler2);
+        System.out.println(cooler3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
 
