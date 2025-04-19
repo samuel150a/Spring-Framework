@@ -630,6 +630,35 @@ public class RunnerSetter {
         System.out.println(proc2);
         System.out.println(proc3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Intel22 intel1 = new Intel22();
+        intel1.setGeneration("12th Gen");
+        intel1.setSeries("Core i5");
+        intel1.setCores(6);
+        intel1.setSpeed(3.9);
+
+        Intel22 intel2 = new Intel22();
+        intel2.setGeneration("12th Gen");
+        intel2.setSeries("Core i5");
+        intel2.setCores(6);
+        intel2.setSpeed(3.9);
+
+        Intel22 intel3 = new Intel22();
+        intel3.setGeneration("11th Gen");
+        intel3.setSeries("Core i7");
+        intel3.setCores(8);
+        intel3.setSpeed(3.5);
+
+        boolean match22 = intel1.equals(intel2);
+        boolean notMatch22 = intel3.equals(intel2);
+        System.out.println("intel matched: " + match22);
+        System.out.println("intel not matched: " + notMatch22);
+
+        System.out.println(intel1);
+        System.out.println(intel2);
+        System.out.println(intel3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
