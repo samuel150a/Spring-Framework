@@ -826,6 +826,33 @@ public class RunnerSetter {
         System.out.println(board2);
         System.out.println(board3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        PowerSupply33 supply1 = new PowerSupply33();
+        supply1.setBrand("Corsair");
+        supply1.setWattage(650);
+        supply1.setType("ATX");
+        supply1.setModular(true);
+
+        PowerSupply33 supply2 = new PowerSupply33();
+        supply2.setBrand("Corsair");
+        supply2.setWattage(650);
+        supply2.setType("ATX");
+        supply2.setModular(true);
+
+        PowerSupply33 supply3 = new PowerSupply33();
+        supply3.setBrand("CoolerMaster");
+        supply3.setWattage(550);
+        supply3.setType("SFX");
+        supply3.setModular(false);
+
+        boolean match33 = supply1.equals(supply2);
+        boolean notMatch33 = supply3.equals(supply2);
+        System.out.println("powersupply matched: " + match33);
+        System.out.println("powersupply not matched: " + notMatch33);
+
+        System.out.println(supply1);
+        System.out.println(supply2);
+        System.out.println(supply3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
     }
 }
