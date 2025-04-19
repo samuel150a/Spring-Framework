@@ -853,6 +853,33 @@ public class RunnerSetter {
         System.out.println(supply2);
         System.out.println(supply3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        Jam34 jam1 = new Jam34();
+        jam1.setFlavor("Strawberry");
+        jam1.setBrand("Kissan");
+        jam1.setWeight(500);
+        jam1.setSugarFree(false);
+
+        Jam34 jam2 = new Jam34();
+        jam2.setFlavor("Strawberry");
+        jam2.setBrand("Kissan");
+        jam2.setWeight(500);
+        jam2.setSugarFree(false);
+
+        Jam34 jam3 = new Jam34();
+        jam3.setFlavor("Mango");
+        jam3.setBrand("Mapro");
+        jam3.setWeight(300);
+        jam3.setSugarFree(true);
+
+        boolean match34 = jam1.equals(jam2);
+        boolean notMatch34 = jam3.equals(jam2);
+        System.out.println("jam matched: " + match34);
+        System.out.println("jam not matched: " + notMatch34);
+
+        System.out.println(jam1);
+        System.out.println(jam2);
+        System.out.println(jam3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
     }
 }
