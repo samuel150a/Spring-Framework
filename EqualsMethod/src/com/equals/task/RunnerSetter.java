@@ -798,6 +798,35 @@ public class RunnerSetter {
         System.out.println(node3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
+
+        Breadboard29 board1 = new Breadboard29();
+        board1.setSize("Full");
+        board1.setHoles(830);
+        board1.setPowerRails(true);
+        board1.setColor("White");
+
+        Breadboard29 board2 = new Breadboard29();
+        board2.setSize("Full");
+        board2.setHoles(830);
+        board2.setPowerRails(true);
+        board2.setColor("White");
+
+        Breadboard29 board3 = new Breadboard29();
+        board3.setSize("Half");
+        board3.setHoles(400);
+        board3.setPowerRails(false);
+        board3.setColor("Transparent");
+
+        boolean match29 = board1.equals(board2);
+        boolean notMatch29 = board3.equals(board2);
+        System.out.println("breadboard matched: " + match29);
+        System.out.println("breadboard not matched: " + notMatch29);
+
+        System.out.println(board1);
+        System.out.println(board2);
+        System.out.println(board3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
     }
 }
 
