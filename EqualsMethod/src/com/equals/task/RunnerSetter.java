@@ -546,6 +546,34 @@ public class RunnerSetter {
         System.out.println(diode2);
         System.out.println(diode3);
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        Fuse19 fuse1 = new Fuse19();
+        fuse1.setMaterial("Ceramic");
+        fuse1.setCurrentLimit(10);
+        fuse1.setVoltageRating("250V");
+        fuse1.setSize("5x20mm");
+
+        Fuse19 fuse2 = new Fuse19();
+        fuse2.setMaterial("Ceramic");
+        fuse2.setCurrentLimit(10);
+        fuse2.setVoltageRating("250V");
+        fuse2.setSize("5x20mm");
+
+        Fuse19 fuse3 = new Fuse19();
+        fuse3.setMaterial("Glass");
+        fuse3.setCurrentLimit(5);
+        fuse3.setVoltageRating("125V");
+        fuse3.setSize("6x30mm");
+
+        boolean matchFuse = fuse1.equals(fuse2);
+        boolean notMatchFuse = fuse3.equals(fuse2);
+        System.out.println("fuse matched: " + matchFuse);
+        System.out.println("fuse not matched: " + notMatchFuse);
+
+        System.out.println(fuse1);
+        System.out.println(fuse2);
+        System.out.println(fuse3);
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 }
 
