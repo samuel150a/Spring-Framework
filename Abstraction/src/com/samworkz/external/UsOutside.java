@@ -12,7 +12,7 @@ public class UsOutside
     public void info2()
     {
         if(usbport!=null)
-        System.out.println("running in info2");
+        this.usbport.connection();
         else {
             System.err.println("its null");
         }
