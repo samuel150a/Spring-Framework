@@ -12,7 +12,7 @@ public class BtyOutside
 
     public void info1() {
         if (battery != null) {
-            System.out.println("running in the info1 method");
+            this.battery.recharge();
         }
         else {
             System.err.println("its null");
