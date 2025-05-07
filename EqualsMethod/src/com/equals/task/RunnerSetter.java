@@ -862,7 +862,7 @@ public class RunnerSetter {
         Jam34 jam2 = new Jam34();
         jam2.setFlavor("Strawberry");
         jam2.setBrand("Kissan");
-        jam2.setWeight(500);
+    jam2.setWeight(500);
         jam2.setSugarFree(false);
 
         Jam34 jam3 = new Jam34();
