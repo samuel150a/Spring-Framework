@@ -2,15 +2,28 @@ package com.xworkz;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @WebServlet(urlPatterns="/Feed")
-public class FeedbackServlet extends GenericServlet {
-    @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        String name=servletRequest.getParameter("n");
-         String college=servletRequest.getParameter("c");
-        String webcourse=servletRequest.getParameter("cou");
-        String knowl=servletRequest.getParameter("k");
+public class FeedbackServlet extends HttpServlet {
+
+    public FeedbackServlet()
+    {
+        System.out.println("Running in the FeedBackServlet constructor");
+    }
+    //@Override
+    //public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+System.out.println("running in the post method");
+
+        String name=req.getParameter("n");
+         String college=req.getParameter("c");
+        String webcourse=req.getParameter("cou");
+        String knowl=req.getParameter("k");
 
         System.out.println(name);
         System.out.println(college);
@@ -18,7 +31,13 @@ public class FeedbackServlet extends GenericServlet {
         System.out.println(knowl);
 
 
-        RequestDispatcher requestDispatcher=servletRequest.getRequestDispatcher("SuccessFeedback.jsp");
-        requestDispatcher.forward(servletRequest,servletResponse);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessFeedback.jsp");
+        req.setAttribute("n",name);
+        req.setAttribute("c",college);
+        req.setAttribute("cou",webcourse);
+        req.setAttribute("k",knowl);
+
+
+        requestDispatcher.forward(req,resp);
     }
 }
