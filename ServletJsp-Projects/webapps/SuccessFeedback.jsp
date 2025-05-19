@@ -31,13 +31,45 @@
     </div>
 </nav>
 <body>
-<h1> Thank You For the Feedback.. We will Get back to you soon...</h1>
-<h2>The details are</h2>
-<h4>Name:${n}</h4>
-<h4>College:${c}</h4>
-<h4>webcourse:${cou}</h4>
-<h4>knowl:${k}</h4>
+
 </body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Sl No.</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">College</th>
+        <th scope="col">Webcourse</th>
+        <th scope="col">Teaching</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+
+        <th scope="row">1</th>
+        <td>${dto.name}</td>
+        <td>${dto.college}</td>
+        <td>${dto.webcourse}</td>
+        <td>${dto.knowl}</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    </tbody>
+</table>
 <style>
     .navbar {
       background-color: #ffc107;

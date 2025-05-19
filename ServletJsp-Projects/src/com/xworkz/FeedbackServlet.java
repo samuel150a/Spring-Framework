@@ -1,5 +1,7 @@
 package com.xworkz;
 
+import co.dto.FeedbackDto;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,13 +33,21 @@ System.out.println("running in the post method");
         System.out.println(knowl);
 
 
-        RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessFeedback.jsp");
+
         req.setAttribute("n",name);
         req.setAttribute("c",college);
         req.setAttribute("cou",webcourse);
         req.setAttribute("k",knowl);
 
+        FeedbackDto dto=new FeedbackDto();
+        dto.setname(name);
+        dto.setcollege(college);
+        dto.setwebcourse(webcourse);
+        dto.setknowl(knowl);
 
+
+        req.setAttribute("dto",dto);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessFeedback.jsp");
         requestDispatcher.forward(req,resp);
     }
 }
