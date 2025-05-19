@@ -1,5 +1,7 @@
 package com.xworkz;
 
+import co.dto.DonationDto;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,12 +42,25 @@ public class DonationServlet extends HttpServlet {
 
         System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
 
-        RequestDispatcher requestDispatcher= req.getRequestDispatcher("SuccessDonation.jsp");
+
             req.setAttribute("name",name);
             req.setAttribute("email",email);
             req.setAttribute("amount",amount);
             req.setAttribute("org",org);
-        requestDispatcher.forward(req,resp);
+
+
+            DonationDto dto=new DonationDto();
+            dto.setname(name);
+
+            dto.setemail(email);
+            dto.setamount(amount);
+            dto.setorg(org);
+
+
+            req.setAttribute("dto",dto);
+            RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessDonation.jsp");
+            requestDispatcher.forward(req,resp);
+
 
 
     }

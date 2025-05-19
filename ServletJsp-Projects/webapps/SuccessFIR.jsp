@@ -10,6 +10,9 @@
 
 
 
+
+
+
 <nav class="navbar navbar-expand-lg bg-warning">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Karnataka Police Office Portal</a>
@@ -35,15 +38,43 @@
     </div>
   </div>
 </nav>
-<div align="center">
-<h1>Your FIR As been registered</h1>
-  <h1>The Details  Are </h1>
-<h4>Police Station Name:${pname}</h4>
-<h4>Name:${name}</h4>
-<h4>Complaint:${sub}</h4>
-<h4>City:${city}</h4>
-<h4>Aadhar proof:${proof}</h4>
-</div>
+
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Sl No.</th>
+
+    <th scope="col">Police Station</th>
+    <th scope="col">Name</th>
+    <th scope="col">Complaint</th>
+    <th scope="col">City</th>
+    <th scope="col">Aadhar</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+
+
+
+    <th scope="row">1</th>
+    <td>${dto.pname}</td>
+    <td>${dto.name}</td>
+    <td>${dto.complaint}</td>
+    <td>${dto.city}</td>
+    <td>${dto.aadhar}</td>
+
+
+
+  </tr>
+
+
+
+
+
+  </tbody>
+</table>
 
 <style>
   .navbar {

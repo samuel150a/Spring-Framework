@@ -33,19 +33,46 @@
     </div>
 </nav>
 <body>
-<div align="center">
-<h2>Welcome to Donation App</h2>
 
 
-<h1>Thanks for donating </h1>
-<h4>the details are</h4>
-<h4>Name:${name}</h4>
-<h4>Email:${email}</h4>
-<h4>Amount:${amount}</h4>
-<h4>Org:${org}</h4>
-</div>
 
 </body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Sl No.</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">amount</th>
+        <th scope="col">Organisation</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+
+        <th scope="row">1</th>
+        <td>${dto.name}</td>
+        <td>${dto.email}</td>
+        <td>${dto.amount}</td>
+        <td>${dto.org}</td>
+
+
+
+
+    </tr>
+
+
+
+
+
+    </tbody>
+</table>
 
 <style>
     .navbar {

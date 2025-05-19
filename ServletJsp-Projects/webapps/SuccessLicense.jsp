@@ -32,16 +32,45 @@
     </div>
 </nav>
 <body>
-<div align="center">
-    <h1> Dear Applicant Your Application for License Applied Succesfully.. </h1>
-    <h2> The Details are</h2>
-    <h4>Name:${name}</h4>
-    <h4>SonOf:${s}</h4>
-    <h4>Dob:${d}</h4>
-    <h4>Photo:${p}</h4>
-</div>
 
 </body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Sl No.</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">SonOf</th>
+        <th scope="col">Dob</th>
+        <th scope="col">Photo</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+
+        <th scope="row">1</th>
+        <td>${dto.name}</td>
+        <td>${dto.sonof}</td>
+        <td>${dto.dob}</td>
+        <td>${dto.photo}</td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+    </tbody>
+</table>
 <style>
     .navbar {
       background-color: #ffc107;
