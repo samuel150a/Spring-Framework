@@ -2,6 +2,8 @@ package com.xworkz;
 
 
 import co.dto.LicenseDto;
+import co.dto.LicenseServiceImple;
+import co.service.LicenseService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -20,11 +22,11 @@ public class LicenseServlet  extends HttpServlet {
     //public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    System.out.println("Running in the Post method");
-    String name=req.getParameter("name");
-        String sonof=req.getParameter("s");
-        String dob=req.getParameter("d");
-        String photo=req.getParameter("p");
+        System.out.println("Running in the Post method");
+        String name = req.getParameter("name");
+        String sonof = req.getParameter("s");
+        String dob = req.getParameter("d");
+        String photo = req.getParameter("p");
 
         System.out.println(name);
         System.out.println(sonof);
@@ -32,28 +34,34 @@ public class LicenseServlet  extends HttpServlet {
         System.out.println(photo);
 
 
+        req.setAttribute("name", name);
+        req.setAttribute("s", sonof);
+        req.setAttribute("d", dob);
+        req.setAttribute("p", photo);
 
-
-
-
-
-
-
-        req.setAttribute("name",name);
-        req.setAttribute("s",sonof);
-        req.setAttribute("d",dob);
-        req.setAttribute("p",photo);
-
-LicenseDto dto =new LicenseDto();
+        LicenseDto dto = new LicenseDto();
         dto.setname(name);
         dto.setsonof(sonof);
         dto.setdob(dob);
         dto.setphoto(photo);
 
+        LicenseService service = new LicenseServiceImple();
+        boolean saved = service.save(dto);
 
-        req.setAttribute("dto",dto);
-        RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessLicense.jsp");
-        requestDispatcher.forward(req,resp);
+        if (saved) {
+            req.setAttribute("dto", dto);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessLicense.jsp");
+            requestDispatcher.forward(req, resp);
+
+        }
+
+     else {
+            req.setAttribute("dto", dto);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("License.jsp");
+            requestDispatcher.forward(req, resp);
+
+        }
+
 
     }
 }
