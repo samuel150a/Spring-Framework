@@ -39,8 +39,8 @@
 <h4>Medical Board of India-Patient Medical Report</h4>
     Patient Name:<input type="text" name="name"><br><br>
     Age:<input type="int" name="age"><br><br>
-    Blood Group:<input type="text" name="g"><br><br>
-    Blood Presure:<input type="text" name="p"><br><br>
+    Blood Group:<input type="text" name="bloodgroup"><br><br>
+    Blood Pressure:<input type="text" name="bloodpressure"><br><br>
     <input type="submit"class="btn btn-primary"  value="Download Report">
 </form>
 </div>
