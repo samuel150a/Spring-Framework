@@ -38,7 +38,19 @@ public class FirServlet extends HttpServlet {
         String aadhar = req.getParameter("aadhar");
         System.out.println(aadhar);
 
+        req.setAttribute("name",name);
+        req.setAttribute("city",complaint);
+        req.setAttribute("city",city);
+        req.setAttribute("aadhar",aadhar);
+
+
         FIRDto dto = new FIRDto();
+
+
+
+
+
+
         FirService service = new FirServiceImpl();
 
         dto.setpname(pname);
@@ -49,12 +61,14 @@ public class FirServlet extends HttpServlet {
 
 
         boolean saved = service.save(dto);
+      String Name=dto.getname();
 
-        if (saved) {
+        if (Name!=null && Name.length()>=4 && Name.length()<=20) {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessFIR.jsp");
             req.setAttribute("dto", dto);
 
             requestDispatcher.forward(req, resp);
+            System.out.println("Successfull");
         }
 
         else {
@@ -63,6 +77,7 @@ public class FirServlet extends HttpServlet {
             req.setAttribute("dto", dto);
 
             requestDispatcher.forward(req, resp);
+            System.err.println("Name cant be null");
         }
     }
 }
