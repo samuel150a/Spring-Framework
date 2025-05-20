@@ -34,14 +34,51 @@
 </nav>
 
 <body>
+<div align="center">
 <h1>Your Medical Report is ready...Kindly Pay the bill & issue  the report...</h1>
-<h2>The Details are</h2>
-<h4>Name:${name}</h4>
-<h4>Age:${age}</h4>
-<h4>BloodGroup:${g}</h4>
-<h4>BloodPresure:${p}</h4>
+</div>
+
+
 
 </body>
+
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Sl No.</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">BloodGroup</th>
+        <th scope="col">BloodPressure</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+
+        <th scope="row">1</th>
+        <td>${dto.name}</td>
+        <td>${dto.age}</td>
+        <td>${dto.bloodgroup}</td>
+        <td>${dto.bloodpressure}</td>
+
+
+
+
+    </tr>
+
+
+
+
+
+    </tbody>
+</table>
 
 <style>
     .navbar {
