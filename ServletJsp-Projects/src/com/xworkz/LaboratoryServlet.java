@@ -1,5 +1,10 @@
 package com.xworkz;
 
+import co.dto.DonationDto;
+import co.dto.LaboratoryDto;
+import co.dto.LaboratoryServiceImple;
+import co.service.LaboratoryService;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,26 +27,50 @@ public class LaboratoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 System.out.println("Running in the post method");
 
-        String pname=req.getParameter("name");
+        String name=req.getParameter("name");
         String age=req.getParameter("age");
-        String bg=req.getParameter("g");
-        String bp=req.getParameter("p");
+        String bloodgroup=req.getParameter("bloodgroup");
+        String bloodpressure=req.getParameter("bloodpressure");
 
 
-        System.out.println(pname);
+        System.out.println(name);
         System.out.println(age);
-        System.out.println(bg);
-        System.out.println(bp);
+        System.out.println(bloodgroup);
+        System.out.println(bloodpressure);
 
-
-        RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessLaboratory.jsp");
-
-        req.setAttribute("name",pname);
+        req.setAttribute("name",name);
         req.setAttribute("age",age);
-        req.setAttribute("g",bg);
-        req.setAttribute("p",bp);
+        req.setAttribute("bloodgroup",bloodgroup);
+        req.setAttribute("bloodpressure",bloodpressure);
 
-        requestDispatcher.forward(req,resp);
+        LaboratoryDto dto=new LaboratoryDto();
+        dto.setname(name);
+
+        dto.setage(age);
+        dto.setbloodgroup(bloodgroup);
+        dto.setbloodpressure(bloodpressure);
+
+        LaboratoryService service=new LaboratoryServiceImple();
+        boolean saved=service.save( dto);
+
+
+
+
+
+
+
+        if(saved) {
+            req.setAttribute("dto", dto);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessLaboratory.jsp");
+            requestDispatcher.forward(req, resp);
+        }
+        else {
+            req.setAttribute("dto", dto);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("Laboratory.jsp");
+            requestDispatcher.forward(req, resp);
+        }
+
+
 
     }
 }
