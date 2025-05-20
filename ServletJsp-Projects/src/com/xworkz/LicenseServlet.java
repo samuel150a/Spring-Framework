@@ -47,18 +47,23 @@ public class LicenseServlet  extends HttpServlet {
 
         LicenseService service = new LicenseServiceImple();
         boolean saved = service.save(dto);
+        String Name=dto.getname();
 
-        if (saved) {
+        if (Name!=null && Name.length()>=4 && Name.length()<=20) {
             req.setAttribute("dto", dto);
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessLicense.jsp");
+            req.setAttribute("message","Save is success");
             requestDispatcher.forward(req, resp);
+            System.out.println("Successfull");
 
         }
 
      else {
             req.setAttribute("dto", dto);
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("License.jsp");
+            req.setAttribute("message","Save Failed");
             requestDispatcher.forward(req, resp);
+            System.err.println("Name cant be null");
 
         }
 
