@@ -35,6 +35,7 @@
 <div align="center">
 <h2>Goverment of India </h2>
 <h3>Ministry of Road Transport & Highways</h3>
+    <h6 style="color:red"> ${message}</h6>
 <form action="L" method="Post">
     Name of the applicant:<input type="text" name="name"><br><br>
     Son of:<input type="text" name="s"><br><br>
