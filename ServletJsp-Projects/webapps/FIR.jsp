@@ -41,15 +41,13 @@
 <h2>Complient-Registration</h2>
 <form action="Reg" method="Post">
 
-
-
-Police Station Name:<input type="text" name="pname"><br><br>
-
+  Police Station Name:<input type="text" name="pname"><br><br>
 Name:<input type="text" name="name"><br><br>
-Complaint:<input type="text" name="sub"><br><br>
+Complaint:<input type="text" name="complaint"><br><br>
 City:<input type="text" name="city"><br><br>
-Aadhar proof:<input type="file" name="proof"><br><br>
+Aadhar proof:<input type="file" name="aadhar"><br><br>
 <input type="submit" class="btn btn-primary"value="Register FIR"><br><br>
+  <h1></h1>
 </form>
 </div>
 
