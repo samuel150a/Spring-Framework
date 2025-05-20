@@ -76,6 +76,10 @@
   </tbody>
 </table>
 
+<div align="center">
+  <h6 style="color:green">Your FIR as been registered</h6>
+</div>
+
 <style>
   .navbar {
     background-color: #ffc107;
