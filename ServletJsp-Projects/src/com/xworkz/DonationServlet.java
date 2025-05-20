@@ -1,6 +1,8 @@
 package com.xworkz;
 
 import co.dto.DonationDto;
+import co.dto.DonationImple;
+import co.service.DonationService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -56,10 +58,20 @@ public class DonationServlet extends HttpServlet {
             dto.setamount(amount);
             dto.setorg(org);
 
+            DonationService service=new DonationImple();
+            Boolean saved=service.save(dto);
 
+            if (saved)
+            {
             req.setAttribute("dto",dto);
             RequestDispatcher requestDispatcher=req.getRequestDispatcher("SuccessDonation.jsp");
             requestDispatcher.forward(req,resp);
+            }
+            else {
+                req.setAttribute("dto", dto);
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("Donation.jsp");
+                requestDispatcher.forward(req, resp);
+            }
 
 
 
