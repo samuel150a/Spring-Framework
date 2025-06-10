@@ -40,7 +40,6 @@
 <div align="center">
 <h2>Complient-Registration</h2>
 <form action="Reg" method="Post">
-
   Police Station Name:<input type="text" name="pname"><br><br>
 Name:<input type="text" name="name"><br><br>
 Complaint:<input type="text" name="complaint"><br><br>
