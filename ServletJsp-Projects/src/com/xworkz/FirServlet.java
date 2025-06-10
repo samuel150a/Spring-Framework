@@ -35,11 +35,10 @@ public class FirServlet extends HttpServlet {
         System.out.println(complaint);
         String city = req.getParameter("city");
         System.out.println(city);
-        String aadhar = req.getParameter("aadhar");
-        System.out.println(aadhar);
+        String aadhar = req.getParameter("aadhar");        System.out.println(aadhar);
 
         req.setAttribute("name",name);
-        req.setAttribute("city",complaint);
+        req.setAttribute("complaint",complaint);
         req.setAttribute("city",city);
         req.setAttribute("aadhar",aadhar);
 
