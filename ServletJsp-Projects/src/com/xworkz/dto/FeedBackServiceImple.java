@@ -1,6 +1,6 @@
-package co.dto;
+package com.xworkz.dto;
 
-import co.service.FeedBackService;
+import com.xworkz.service.FeedBackService;
 
 public class FeedBackServiceImple implements FeedBackService {
     public FeedBackServiceImple()
