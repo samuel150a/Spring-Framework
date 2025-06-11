@@ -1,6 +1,6 @@
-package co.service;
+package com.xworkz.service;
 
-import co.dto.FIRDto;
+import com.xworkz.dto.FIRDto;
 
 public interface FirService {
     boolean save(FIRDto firDto);
