@@ -1,8 +1,8 @@
-package com.xworkz;
+package com.xworkz.servlet;
 
-import co.dto.FeedBackServiceImple;
-import co.dto.FeedbackDto;
-import co.service.FeedBackService;
+import com.xworkz.dto.FeedBackServiceImple;
+import com.xworkz.dto.FeedbackDto;
+import com.xworkz.service.FeedBackService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
