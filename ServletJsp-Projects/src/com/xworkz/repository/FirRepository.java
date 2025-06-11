@@ -1,6 +1,6 @@
-package co.repository;
+package com.xworkz.repository;
 
-import co.dto.FIRDto;
+import com.xworkz.dto.FIRDto;
 
 public interface FirRepository {
 
