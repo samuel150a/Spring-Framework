@@ -1,6 +1,6 @@
-package co.service;
+package com.xworkz.service;
 
-import co.dto.DonationDto;
+import com.xworkz.dto.DonationDto;
 
 public interface DonationService {
     boolean save(DonationDto dto);
