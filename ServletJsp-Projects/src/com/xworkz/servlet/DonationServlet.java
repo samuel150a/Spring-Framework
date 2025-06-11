@@ -1,8 +1,8 @@
-package com.xworkz;
+package com.xworkz.servlet;
 
-import co.dto.DonationDto;
-import co.dto.DonationImple;
-import co.service.DonationService;
+import com.xworkz.dto.DonationDto;
+import com.xworkz.dto.DonationImple;
+import com.xworkz.service.DonationService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
