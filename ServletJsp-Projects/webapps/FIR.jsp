@@ -44,7 +44,7 @@
 Name:<input type="text" name="name"><br><br>
 Complaint:<input type="text" name="complaint"><br><br>
 City:<input type="text" name="city"><br><br>
-Aadhar proof:<input type="file" name="aadhar"><br><br>
+
 <input type="submit" class="btn btn-primary"value="Register FIR"><br><br>
   <h1></h1>
 </form>
