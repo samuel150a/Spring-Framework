@@ -1,8 +1,8 @@
-package com.xworkz;
+package com.xworkz.servlet;
 
-import co.dto.FIRDto;
-import co.dto.FirServiceImpl;
-import co.service.FirService;
+import com.xworkz.dto.FIRDto;
+import com.xworkz.dto.FirServiceImpl;
+import com.xworkz.service.FirService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -35,34 +35,21 @@ public class FirServlet extends HttpServlet {
         System.out.println(complaint);
         String city = req.getParameter("city");
         System.out.println(city);
-        String aadhar = req.getParameter("aadhar");        System.out.println(aadhar);
-
         req.setAttribute("name",name);
         req.setAttribute("complaint",complaint);
         req.setAttribute("city",city);
-        req.setAttribute("aadhar",aadhar);
-
-
         FIRDto dto = new FIRDto();
-
-
-
-
-
-
         FirService service = new FirServiceImpl();
 
         dto.setpname(pname);
         dto.setname(name);
         dto.setcomplaint(complaint);
         dto.setcity(city);
-        dto.setaadhar(aadhar);
+
 
 
         boolean saved = service.save(dto);
-      String Name=dto.getname();
-
-        if (Name!=null && Name.length()>=4 && Name.length()<=20) {
+        if (saved==true) {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessFIR.jsp");
             req.setAttribute("dto", dto);
 
