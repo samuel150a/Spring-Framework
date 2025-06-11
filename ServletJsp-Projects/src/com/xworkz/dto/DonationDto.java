@@ -1,4 +1,4 @@
-package co.dto;
+package com.xworkz.dto;
 
 public class DonationDto {
 
