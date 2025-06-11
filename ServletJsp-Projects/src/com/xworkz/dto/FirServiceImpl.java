@@ -1,8 +1,8 @@
-package co.dto;
+package com.xworkz.dto;
 
-import co.repository.FirRepository;
-import co.repository.FirRepositoryImpl;
-import co.service.FirService;
+import com.xworkz.repository.FirRepository;
+import com.xworkz.repository.FirRepositoryImpl;
+import com.xworkz.service.FirService;
 
 public class FirServiceImpl  implements FirService {
     public FirServiceImpl() {
