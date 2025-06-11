@@ -1,6 +1,6 @@
-package co.dto;
+package com.xworkz.dto;
 
-import co.service.DonationService;
+import com.xworkz.service.DonationService;
 
 public class DonationImple  implements DonationService
 {
