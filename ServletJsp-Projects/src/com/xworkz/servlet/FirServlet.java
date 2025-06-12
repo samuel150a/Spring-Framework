@@ -35,9 +35,12 @@ public class FirServlet extends HttpServlet {
         System.out.println(complaint);
         String city = req.getParameter("city");
         System.out.println(city);
+
+
         req.setAttribute("name",name);
         req.setAttribute("complaint",complaint);
         req.setAttribute("city",city);
+
         FIRDto dto = new FIRDto();
         FirService service = new FirServiceImpl();
 
@@ -49,7 +52,7 @@ public class FirServlet extends HttpServlet {
 
 
         boolean saved = service.save(dto);
-        if (saved==true) {
+        if (saved) {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("SuccessFIR.jsp");
             req.setAttribute("dto", dto);
 

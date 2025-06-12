@@ -25,9 +25,6 @@ public class FirRepositoryImpl implements FirRepository {
         String password = "Xworkz@123s";
         String url = "jdbc:mysql://localhost:3306/xworkzz";
 
-
-
-
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
