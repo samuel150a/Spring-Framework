@@ -3,6 +3,7 @@ package com.xworkz.piano.service;
 import com.xworkz.piano.dto.PianoDto;
 import com.xworkz.piano.repository.PianoRepository;
 import com.xworkz.piano.repository.PianoRepositoryImple;
+import lombok.SneakyThrows;
 
 import java.util.Optional;
 
@@ -63,6 +64,7 @@ public class PianoServiceImple implements PianoService {
         boolean repo= pianoRepository.persist(dto);
         return saved;
     }
+    @SneakyThrows
     @Override
     public Optional<PianoDto> findById( int PianoId)
     {
