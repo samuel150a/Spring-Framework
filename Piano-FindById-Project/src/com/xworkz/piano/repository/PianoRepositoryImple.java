@@ -43,7 +43,7 @@ try
 {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(DBProperties.URL.getProp(), DBProperties.USER_NAME.getProp(), DBProperties.SECRET.getProp());
-        String findByIdSQL="select * from s dust where dust.id="+PianoId+"";
+        String findByIdSQL="select * from s  where id="+PianoId+"";
         System.out.println("findById :"+findByIdSQL);
         Statement statement=connection.createStatement();
         ResultSet resultSet= statement.executeQuery(findByIdSQL);
