@@ -25,24 +25,22 @@ public class PianoServlet extends HttpServlet {
         System.out.println("Post method in the Piano Servlet ");
 
         String cname = req.getParameter("cname");
-        System.out.println(cname);
 
 
         String mname = req.getParameter("mname");
-        System.out.println(mname);
+
 
         String kname = req.getParameter("kname");
-        System.out.println(kname);
 
 
         String pname = req.getParameter("pname");
-        System.out.println(pname);
+
 
         String msname = req.getParameter("msname");
-        System.out.println(msname);
+
 
         String mfname = req.getParameter("mfname");
-        System.out.println(mfname);
+
 
 
 
@@ -73,8 +71,8 @@ public class PianoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         System.out.println("doGet method in Piano Servlet ");
-        String PianoIdStr=req.getParameter("PianoId");
-        if(!(PianoIdStr == null && PianoIdStr.isEmpty()))
+        String PianoIdStr=req.getParameter("id");
+        if(PianoIdStr != null && !PianoIdStr.isEmpty())
         {
             int PianoId=Integer.parseInt(PianoIdStr);
             PianoService service = new PianoServiceImple();
@@ -82,12 +80,20 @@ public class PianoServlet extends HttpServlet {
             Optional<PianoDto> optionalPianoDto=service.findById(PianoId);
             if(optionalPianoDto.isPresent()) {
                 System.out.println("Piano Id is found");
+                PianoDto pianoDto=optionalPianoDto.get();
+                System.out.println("Data was found "+pianoDto);
+                System.out.println("================================================================");
+
+                req.setAttribute("dto", pianoDto);
             }
             else {
                 System.out.println("Piano Id is not found");
-
+                req.setAttribute("failure", "Piano ID not found");
 
             }
+
+            RequestDispatcher dispatcher = req.getRequestDispatcher("PianoFind.jsp");
+            dispatcher.forward(req, resp);
         }
 
     }
