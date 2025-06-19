@@ -37,12 +37,21 @@
 </nav>
 <div align="center">
 
-    <form action="Piano" method="Post">
-        Search ID:<input type="text" placeholder="enter id" name="cname"><br><br>
+    <form action="Piano" method="get">
+        Search ID:<input type="text" placeholder="enter id" name="id"><br><br>
 
 
         <input type="submit" class="btn btn-primary" value="Search"><br><br>
     </form>
+    <br>
+    <span style="color:red;">${failure}</span>
+    <br><br>
+    <p>CustomberName: ${dto.customberName}</p>
+    <p>ModelName: ${dto.modelName}</p>
+    <p>NoOfKeys: ${dto.noOfKeys}</p>
+    <p>Price: ${dto.price}</p>
+    <p>MemberShip: ${dto.memberShip}</p>
+    <p>Manufactured By: ${dto.manufactured}</p>
 </div>
 </body>
 </html>
