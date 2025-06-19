@@ -89,7 +89,7 @@
                     <a class="nav-link active" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="Olympics.jsp">Registration Form</a>
+                    <a class="nav-link active" href="Olympic.jsp">Registration Form</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -127,7 +127,6 @@
         <p>State: ${dto.state}</p>
         <p>City:  ${dto.city}</p>
         <p>Sport: ${dto.sport}</p>
-    memberName dob gender phone state city sport
     </div>
 </div>
 
