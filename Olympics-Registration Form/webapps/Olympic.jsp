@@ -115,6 +115,12 @@
 <div class="form-container">
     <div class="form-header">Olympics 2025 2026 Registration Form</div>
 
+
+    <div align="center">
+    <h6><span style="color:green;">${success}</span></h6>
+    <span style="color:red;">${failure}</span>
+</div>
+
     <form action="Op" method="post">
         <div class="row mt-4">
             <div class="col-md-6 form-group">
