@@ -19,45 +19,62 @@ public class OlympicRepositoryImple implements OlympicRepository
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection connection = DriverManager.getConnection(DBProperties.URL.getProp(),DBProperties.USER_NAME.getProp(),DBProperties.SECRET.getProp());
-                String sql = "insert into register values(0,'"+ dto.getMemberName()+ "','" + dto.getDob() + "','" + dto.getGender() + "','" + dto.getPhone() + "','" + dto.getState() + "','" + dto.getCity() + "','" + dto.getSport() + "')";
-                Statement statement = connection.createStatement();
+                Connection connection = DriverManager.getConnection(DBProperties.URL.getProp(), DBProperties.USER_NAME.getProp(), DBProperties.SECRET.getProp());
+                String sql = "insert into register(MemberName,Dob,Gender,Phone,State,City,Sport,CreatedTime) values(?,?,?,?,?,?,?,?)";
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setString(1, dto.getMemberName());
+                statement.setString(2, dto.getDob());
+                statement.setString(3, dto.getGender());
+                statement.setString(4, dto.getPhone());
+                statement.setString(5, dto.getState());
+                statement.setString(6, dto.getCity());
+                statement.setString(7, dto.getSport());
 
-                statement.executeUpdate(sql);
+                statement.setTimestamp(8, dto.getCreatedTime());
 
 
+                int result = statement.executeUpdate();
+
+                if (result > 0) {
+                    return true;
+                }
             } catch (ClassNotFoundException | SQLException e) {
                 System.out.println(e.getMessage());
             }
-            return true;
+
         }
         return false;
     }
-
     @Override
-    public Optional<OlympicDto> findById(int OlympicId) throws ClassNotFoundException, SQLException {
+    public Optional<OlympicDto> findById(int OlympicId){
         System.out.println("running in findById in the OlympicRepositoryImple");
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DBProperties.URL.getProp(), DBProperties.USER_NAME.getProp(), DBProperties.SECRET.getProp());
-            String findByIdSQL="select * from register  where id="+OlympicId+"";
+            String findByIdSQL="select * from register  where id=?";
             System.out.println("findById :"+findByIdSQL);
-            Statement statement=connection.createStatement();
-            ResultSet resultSet= statement.executeQuery(findByIdSQL);
+
+            PreparedStatement statement = connection.prepareStatement(findByIdSQL);
+            statement.setInt(1, OlympicId);
+
+            ResultSet resultSet= statement.executeQuery();
             System.out.println("resultSet :"+resultSet);
             while(resultSet.next())
             {
-                String Id= resultSet.getString("id");
-                String MemberName=resultSet.getString("MemberName");
-                String Dob=resultSet.getString("Dob");
-                String Gender=resultSet.getString("Gender");
-                String Phone=resultSet.getString("Phone");
-                String State=resultSet.getString("State");
-                String City=resultSet.getString("City");
-                String Sport=resultSet.getString("Sport");
+                String Id= resultSet.getString(1);
+                String MemberName=resultSet.getString(2);
+                String Dob=resultSet.getString(3);
+                String Gender=resultSet.getString(4);
+                String Phone=resultSet.getString(5);
+                String State=resultSet.getString(6);
+                String City=resultSet.getString(7);
+                String Sport=resultSet.getString(8);
+                Timestamp Time=resultSet.getTimestamp(9);
+                System.out.println("==========================================");
 
-                OlympicDto dto = new OlympicDto(MemberName,Dob,Gender,Phone,State,City,Sport);
+
+                OlympicDto dto = new OlympicDto(MemberName,Dob,Gender,Phone,State,City,Sport,Time);
                 return  Optional.of(dto);
             }
 
