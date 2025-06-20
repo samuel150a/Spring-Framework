@@ -65,30 +65,37 @@ public class OlympicServlet extends HttpServlet
         {
             System.out.println("doGet method in olympics Servlet ");
             String OlympicIdStr=req.getParameter("id");
-            if(OlympicIdStr != null && !OlympicIdStr.isEmpty())
-            {
-                int OlympicId=Integer.parseInt(OlympicIdStr);
+            if(OlympicIdStr != null && !OlympicIdStr.isEmpty()) {
+                int OlympicId = Integer.parseInt(OlympicIdStr);
                 OlympicService service = new OlympicServiceImple();
 
-                Optional<OlympicDto> optionalOlympicDto=service.findById(OlympicId);
-                if(optionalOlympicDto.isPresent()) {
+                Optional<OlympicDto> optionalOlympicDto = service.findById(OlympicId);
+
+
+                if (optionalOlympicDto.isPresent()) {
                     System.out.println("Olympic Id is found");
-                    OlympicDto olympicDto=optionalOlympicDto.get();
-                    System.out.println("Data was found "+olympicDto);
+                    OlympicDto olympicDto = optionalOlympicDto.get();
+                    System.out.println("Data was found " + olympicDto);
                     System.out.println("================================================================");
 
                     req.setAttribute("dto", olympicDto);
-                }
-
-                else {
+                } else {
                     System.out.println("Olympic Id is not found");
                     req.setAttribute("failure", "Olympic ID not found");
 
+
                 }
+            }
+            else {
+                System.out.println("Olympic ID is missing");
+                req.setAttribute("failure", "Olympic ID is required");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("OlympicCandidentDetails.jsp");
+                dispatcher.forward(req, resp);
+            }
 
             RequestDispatcher Dispatcher = req.getRequestDispatcher("OlympicCandidentDetails.jsp");
             Dispatcher.forward(req,resp);
 
         }
     }
-}
+
