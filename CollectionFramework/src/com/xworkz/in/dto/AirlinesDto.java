@@ -1,9 +1,11 @@
 package com.xworkz.in.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+@EqualsAndHashCode
 @Getter
 @AllArgsConstructor
 @ToString
