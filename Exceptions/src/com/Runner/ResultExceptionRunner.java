@@ -5,7 +5,7 @@ import com.xworkz.ResultException;
 
 public class ResultExceptionRunner {
 
-    public static void main(String args[]) throws ResultException {
+    public static void main(String args[]) {
 
         boolean result = false;
 
