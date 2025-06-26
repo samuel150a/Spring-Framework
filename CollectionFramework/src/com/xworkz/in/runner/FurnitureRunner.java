@@ -26,12 +26,9 @@ public class FurnitureRunner {
 
         Iterator<FurnitureDto> iterator = collection.iterator();
         while (iterator.hasNext()) {
-            FurnitureDto furniture = iterator.next();
-            System.out.println("Furniture Name: " + furniture.getName());
-            System.out.println("Material: " + furniture.getMaterial());
-            System.out.println("Price: " + furniture.getPrice());
-            System.out.println("Is Wooden: " + furniture.isWooden());
-            System.out.println("Category: " + furniture.getCategory());
+            FurnitureDto furniture = iterator.next();// wht is this?
+            System.out.println( furniture );
+
             System.out.println("----------------------------------------");
         }
     }
