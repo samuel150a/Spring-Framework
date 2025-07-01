@@ -1,5 +1,7 @@
 package com.xworkz.in.guest;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
+
 import java.util.*;
 
 public class A1 {
@@ -232,5 +234,56 @@ int ma=Collections.max(nu);
         System.out.println("max num is "+ma);
         System.out.println("****************************22.*****************************************");
 
+        TreeSet<Integer> set = new TreeSet<>();
+        set.add(10);
+        set.add(20);
+        set.add(50);
+        set.add(60);
+        set.add(90);
+
+        Iterator<Integer> itr = set.iterator();
+        while (itr.hasNext()) {
+            if(itr.next() < 50) {
+                itr.remove();
+            }
+        }
+
+        System.out.println("After removing  " + set);
+        System.out.println("****************************23.*****************************************");
+        HashSet<String> set1 = new HashSet<>();
+        set1.add("Apple");
+        set1.add("Banana");
+        set1.add("Cherry");
+
+        List<String> list = new ArrayList<>(set1);
+
+        System.out.println("list: " + list);
+        System.out.println("****************************24.*****************************************");
+
+
+        ArrayList<String> w = new ArrayList<>();
+        w.add("A");
+        w.add("B");
+        w.add("C");
+        w.add("D");
+
+        System.out.println("Orig lst: " + w);
+
+
+        Collections.reverse(w);
+
+        System.out.println("Reve list: " + w);
+        System.out.println("****************************25.*****************************************");
+
+LinkedList<String> hl=new LinkedList<>();
+hl.add("hello");
+        hl.add("how");
+        hl.add("r");
+        hl.add("u");
+        Boolean ck=hl.contains("hello");
+        System.out.println("contains hello "+ ck);
+
+
     }
 }
+
