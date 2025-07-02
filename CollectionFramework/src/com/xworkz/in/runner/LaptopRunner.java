@@ -6,6 +6,7 @@ import com.xworkz.in.repository.LaptopRepositoryImple;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.iterator;
 
@@ -31,6 +32,7 @@ public class LaptopRunner {
                 System.out.println("list  " + la);
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55");
             }
+            collection.stream().sorted().forEach(System.out::println);
 
 
     }
