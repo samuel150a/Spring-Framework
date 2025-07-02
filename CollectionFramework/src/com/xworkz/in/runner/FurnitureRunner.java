@@ -15,7 +15,7 @@ public class FurnitureRunner {
         Collection<FurnitureDto> collection = furnitureRepository.findAll();
 
         System.out.println("Wooden Furniture List:");
-        for (FurnitureDto furniture : collection) {
+        for  (FurnitureDto furniture : collection) {
             if (furniture.isWooden()) {
                 System.out.println("Furniture Name: " + furniture.getName());
                 System.out.println("Material: " + furniture.getMaterial());
