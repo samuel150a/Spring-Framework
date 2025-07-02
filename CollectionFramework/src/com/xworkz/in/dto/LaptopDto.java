@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 @ToString
-public class LaptopDto {
+public class LaptopDto implements Comparable<LaptopDto> {
     private int cost;
     private String brand;
     private String color;
@@ -15,4 +15,20 @@ public class LaptopDto {
     private String proccessor;
 
 
+    @Override
+    public int compareTo(LaptopDto o) {
+
+        System.out.println("running compareble to...");
+        LaptopDto leftside=this;
+        LaptopDto rightside=o;
+        if(leftside.cost==rightside.cost)
+        {
+            return 0;
+        }
+        else if(leftside.cost>rightside.cost)
+        {
+            return 99;
+        }
+        return -99;
+    }
 }
