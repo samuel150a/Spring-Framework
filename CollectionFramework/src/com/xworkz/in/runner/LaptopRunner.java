@@ -5,6 +5,7 @@ import com.xworkz.in.repository.LaptopRepository;
 import com.xworkz.in.repository.LaptopRepositoryImple;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
@@ -32,7 +33,7 @@ public class LaptopRunner {
                 System.out.println("list  " + la);
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55");
             }
-            collection.stream().sorted().forEach(System.out::println);
+            collection.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
 
     }
