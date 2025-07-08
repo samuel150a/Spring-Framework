@@ -34,7 +34,7 @@ public class ProductInfoRunner {
 
 
         System.out.println("________________4. collect the Product warrenty less than 3yrs");
-        collection.stream().filter((product)->product.getWarranty()<3).collect(Collectors.toList()).forEach(System.out::println);
+        collection.stream().filter((product)->product.getWarranty()<3).forEach(System.out::println);
 
         System.out.println(("**********************************************************************"));
 
