@@ -31,8 +31,8 @@ public class CourseDto
                 return this.courseId.equals(casting.courseId);
 
             }
-            return  false;
+
         }
-        return super.equals(obj);
+        return  false;
     }
 }
