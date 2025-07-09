@@ -10,10 +10,7 @@ import com.xworkz.listee.repository.ApplicationRepositoryImple;
 import javafx.application.Application;
 
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.lang.Character.getType;
@@ -21,7 +18,7 @@ import static java.lang.Character.getType;
 public class ApplicationRunner {
     public static void main(String[] args) {
         ApplicationRepository applianceRepository=new ApplicationRepositoryImple();
-        Collection<ApplicationDto> list= applianceRepository.findAll();
+        List<ApplicationDto> list= applianceRepository.findAll();
 
         Iterator<ApplicationDto> iterator = list.iterator();
         while (iterator.hasNext()) {
@@ -35,7 +32,7 @@ public class ApplicationRunner {
         list.stream().filter((app->app.getType()== ApplicationDto.Type.TRAVEL)).forEach(System.out::println);
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 
-        System.out.println("find all by CreatedDate and orger in descending order");
+        System.out.println("find all by CreatedDate and order in descending order");
         list.stream().sorted(Comparator.comparing(ApplicationDto::getCreatedDate).reversed()).forEach(System.out::println);
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 
@@ -54,9 +51,54 @@ public class ApplicationRunner {
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 
         System.out.println("Find Application by Created date");
+
         list.stream().filter(app->app.getCreatedDate().equals( LocalDate.of(2012, 3, 15))).map(ApplicationDto::getName).forEach(System.out::println);
 
+        System.out.println("Usage of List iterator and iterrator");
+        System.out.println("size befor removing"+list.size());
 
+
+        Iterator<ApplicationDto> iterator1 = list.iterator();
+        while (iterator1.hasNext()) {
+            ApplicationDto applicationDto = iterator1.next();
+            if(applicationDto.getName().equals("Instagram"))
+            {
+                iterator1.remove();
+                System.out.println("Istagram app has deleted");
+
+            }
+
+            System.out.println("size after removing"+list.size());
+            System.out.println( applicationDto );
+        }
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+
+        System.out.println("size befor removing"+list.size());
+        ListIterator<ApplicationDto> ls = list.listIterator(list.size());
+        while (ls.hasPrevious()) {
+            ApplicationDto applicationDto1 = ls.previous();
+
+            if (applicationDto1.getName().equals("Goibibo")) {
+                ls.remove();
+                System.out.println("size after %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%removing"+list.size());
+                System.out.println("Removed Application"+applicationDto1.getName());
+                System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+                ApplicationDto newapp=new ApplicationDto("CandyCrush", ApplicationDto.Version.V1_0, LocalDate.of(2010, 1, 10),45, ApplicationDto.Type.TRAVEL,true,6);
+                ls.add(newapp);
+
+                System.out.println(newapp.getName());
+            }
+
+
+
+
+            System.out.println(applicationDto1);
+
+        }
 
 
 
