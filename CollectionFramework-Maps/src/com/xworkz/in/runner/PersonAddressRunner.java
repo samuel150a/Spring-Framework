@@ -6,6 +6,7 @@ import com.xworkz.in.repository.PersonAddressRepository;
 import com.xworkz.in.repository.PersonAddressRepositoryImple;
 
 import java.util.Map;
+import java.util.Set;
 
 public class PersonAddressRunner {
     public static void main(String[] args) {
@@ -17,11 +18,19 @@ public class PersonAddressRunner {
 
 
 
-        map.keySet().forEach(System.out::println);
+        /*map.keySet().forEach(System.out::println);
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
        map.values().forEach(System.out::println);
+*/
+        /*Set<Map.Entry<PersonDto,AddressDto>> entry=map.entrySet();
+        entry.forEach(e->System.out.println(e.getKey()+""+e.getValue()));*/
+        Set<Map.Entry<PersonDto,AddressDto>> entry=map.entrySet();
 
+        entry.forEach(e->{
 
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        });
 
       }
 
