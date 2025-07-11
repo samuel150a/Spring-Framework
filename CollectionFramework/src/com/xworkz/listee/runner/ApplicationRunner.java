@@ -14,6 +14,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.lang.Character.getType;
+import static jdk.nashorn.internal.objects.NativeArray.forEach;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
@@ -46,7 +47,7 @@ public class ApplicationRunner {
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 
         System.out.println("Find Application by Free");
-        list.stream().filter(app->app.isFree()).map(ApplicationDto::getName).forEach(System.out::println);
+        list.stream().filter(app->app.isFree()).map(ApplicationDto::getName).collect(Collectors.toList()).forEach(System.out::println);
 
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 

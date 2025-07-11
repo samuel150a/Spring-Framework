@@ -18,7 +18,7 @@ public class LaptopDto implements Comparable<LaptopDto> {
     @Override
     public int compareTo(LaptopDto o) {
 
-        System.out.println("running compareble to...");
+
         LaptopDto leftside=this;
         LaptopDto rightside=o;
         if(leftside.cost==rightside.cost)
