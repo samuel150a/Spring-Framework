@@ -1,5 +1,6 @@
 package com.xworkz.task2.dataimple;
 
+import com.xworkz.task2.dto.CompanyNameDto;
 import com.xworkz.task2.dto.CountryDto;
 import com.xworkz.task2.dto.VehicleDto;
 
@@ -17,39 +18,39 @@ public class VehicleList {
 
         List<VehicleDto> list = new LinkedList<>();
 
-        CountryList countryList = new CountryList();
-        List<CountryDto> countryGet = countryList.getCountryList();
+        CompanyNameList companyNameList = new CompanyNameList();
+        List<CompanyNameDto> companyNameGet = companyNameList.getCompanyNameList();
 
-        VehicleDto vehicleDto1 = new VehicleDto(101, 2, 200000, countryGet.get(0));
-        VehicleDto vehicleDto2 = new VehicleDto(102, 4, 550000, countryGet.get(1));
-        VehicleDto vehicleDto3 = new VehicleDto(103, 2, 180000, countryGet.get(2));
-        VehicleDto vehicleDto4 = new VehicleDto(104, 4, 750000, countryGet.get(3));
-        VehicleDto vehicleDto5 = new VehicleDto(105, 2, 220000, countryGet.get(4));
-        VehicleDto vehicleDto6 = new VehicleDto(106, 4, 500000, countryGet.get(5));
-        VehicleDto vehicleDto7 = new VehicleDto(107, 2, 210000, countryGet.get(6));
-        VehicleDto vehicleDto8 = new VehicleDto(108, 4, 650000, countryGet.get(7));
-        VehicleDto vehicleDto9 = new VehicleDto(109, 2, 195000, countryGet.get(8));
-        VehicleDto vehicleDto10 = new VehicleDto(110, 4, 700000, countryGet.get(9));
-        VehicleDto vehicleDto11 = new VehicleDto(111, 2, 230000, countryGet.get(10));
-        VehicleDto vehicleDto12 = new VehicleDto(112, 4, 720000, countryGet.get(11));
-        VehicleDto vehicleDto13 = new VehicleDto(113, 2, 210000, countryGet.get(12));
-        VehicleDto vehicleDto14 = new VehicleDto(114, 4, 780000, countryGet.get(13));
-        VehicleDto vehicleDto15 = new VehicleDto(115, 2, 200000, countryGet.get(14));
-        VehicleDto vehicleDto16 = new VehicleDto(116, 4, 660000, countryGet.get(15));
-        VehicleDto vehicleDto17 = new VehicleDto(117, 2, 190000, countryGet.get(16));
-        VehicleDto vehicleDto18 = new VehicleDto(118, 4, 740000, countryGet.get(17));
-        VehicleDto vehicleDto19 = new VehicleDto(119, 2, 225000, countryGet.get(18));
-        VehicleDto vehicleDto20 = new VehicleDto(120, 4, 600000, countryGet.get(19));
-        VehicleDto vehicleDto21 = new VehicleDto(121, 2, 235000, countryGet.get(20));
-        VehicleDto vehicleDto22 = new VehicleDto(122, 4, 710000, countryGet.get(21));
-        VehicleDto vehicleDto23 = new VehicleDto(123, 2, 215000, countryGet.get(22));
-        VehicleDto vehicleDto24 = new VehicleDto(124, 4, 780000, countryGet.get(23));
-        VehicleDto vehicleDto25 = new VehicleDto(125, 2, 205000, countryGet.get(24));
-        VehicleDto vehicleDto26 = new VehicleDto(126, 4, 730000, countryGet.get(25));
-        VehicleDto vehicleDto27 = new VehicleDto(127, 2, 240000, countryGet.get(26));
-        VehicleDto vehicleDto28 = new VehicleDto(128, 4, 690000, countryGet.get(27));
-        VehicleDto vehicleDto29 = new VehicleDto(129, 2, 198000, countryGet.get(28));
-        VehicleDto vehicleDto30 = new VehicleDto(130, 4, 760000, countryGet.get(29));
+        VehicleDto vehicleDto1 = new VehicleDto(101, 2, 200000, companyNameGet.get(0));
+        VehicleDto vehicleDto2 = new VehicleDto(102, 4, 550000, companyNameGet.get(1));
+        VehicleDto vehicleDto3 = new VehicleDto(103, 2, 180000, companyNameGet.get(2));
+        VehicleDto vehicleDto4 = new VehicleDto(104, 4, 750000, companyNameGet.get(3));
+        VehicleDto vehicleDto5 = new VehicleDto(105, 2, 220000, companyNameGet.get(4));
+        VehicleDto vehicleDto6 = new VehicleDto(106, 4, 500000, companyNameGet.get(5));
+        VehicleDto vehicleDto7 = new VehicleDto(107, 2, 210000, companyNameGet.get(6));
+        VehicleDto vehicleDto8 = new VehicleDto(108, 4, 650000, companyNameGet.get(7));
+        VehicleDto vehicleDto9 = new VehicleDto(109, 2, 195000, companyNameGet.get(8));
+        VehicleDto vehicleDto10 = new VehicleDto(110, 4, 700000, companyNameGet.get(9));
+        VehicleDto vehicleDto11 = new VehicleDto(111, 2, 230000, companyNameGet.get(10));
+        VehicleDto vehicleDto12 = new VehicleDto(112, 4, 720000, companyNameGet.get(11));
+        VehicleDto vehicleDto13 = new VehicleDto(113, 2, 210000, companyNameGet.get(12));
+        VehicleDto vehicleDto14 = new VehicleDto(114, 4, 780000, companyNameGet.get(13));
+        VehicleDto vehicleDto15 = new VehicleDto(115, 2, 200000, companyNameGet.get(14));
+        VehicleDto vehicleDto16 = new VehicleDto(116, 4, 660000, companyNameGet.get(15));
+        VehicleDto vehicleDto17 = new VehicleDto(117, 2, 190000, companyNameGet.get(16));
+        VehicleDto vehicleDto18 = new VehicleDto(118, 4, 740000, companyNameGet.get(17));
+        VehicleDto vehicleDto19 = new VehicleDto(119, 2, 225000, companyNameGet.get(18));
+        VehicleDto vehicleDto20 = new VehicleDto(120, 4, 600000, companyNameGet.get(19));
+        VehicleDto vehicleDto21 = new VehicleDto(121, 2, 235000, companyNameGet.get(20));
+        VehicleDto vehicleDto22 = new VehicleDto(122, 4, 710000, companyNameGet.get(21));
+        VehicleDto vehicleDto23 = new VehicleDto(123, 2, 215000, companyNameGet.get(22));
+        VehicleDto vehicleDto24 = new VehicleDto(124, 4, 780000, companyNameGet.get(23));
+        VehicleDto vehicleDto25 = new VehicleDto(125, 2, 205000, companyNameGet.get(24));
+        VehicleDto vehicleDto26 = new VehicleDto(126, 4, 730000, companyNameGet.get(25));
+        VehicleDto vehicleDto27 = new VehicleDto(127, 2, 240000, companyNameGet.get(26));
+        VehicleDto vehicleDto28 = new VehicleDto(128, 4, 690000, companyNameGet.get(27));
+        VehicleDto vehicleDto29 = new VehicleDto(129, 2, 198000, companyNameGet.get(28));
+        VehicleDto vehicleDto30 = new VehicleDto(130, 4, 760000, companyNameGet.get(29));
 
         list.add(vehicleDto1);
         list.add(vehicleDto2);

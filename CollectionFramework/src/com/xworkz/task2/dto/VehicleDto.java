@@ -12,5 +12,5 @@ public class VehicleDto {
     private int vehicleNum;
     private int vechicleType;
     private int vecCost;
-    private CountryDto countryDto;
+    private CompanyNameDto companyNameDto;
 }
