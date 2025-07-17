@@ -1,5 +1,6 @@
-package com.xworkz.Sam;
+package com.xworkz.initializer;
 
+import com.xworkz.samuel.Configure;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class SpringInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -12,7 +13,8 @@ public class SpringInitializer extends AbstractAnnotationConfigDispatcherServlet
     @Override
     protected Class<?>[] getServletConfigClasses() {
         System.out.println("running in getServletConfigClasses  ");
-        return new Class[0];
+        return new Class[] { Configure.class };
+
     }
 
     @Override
