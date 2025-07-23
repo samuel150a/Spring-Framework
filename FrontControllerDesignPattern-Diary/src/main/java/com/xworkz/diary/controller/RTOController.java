@@ -28,10 +28,10 @@ public class RTOController {
 
         model.addAttribute("officeName",officeName);
         model.addAttribute("address",address);
-        model.addAttribute("contactNumber",owner);
-        model.addAttribute("city",age);
-        model.addAttribute("email",sonOf);
-        model.addAttribute("regionCode",vehicle);
+        model.addAttribute("owner",owner);
+        model.addAttribute("age",age);
+        model.addAttribute("sonOf",sonOf);
+        model.addAttribute("vehicle",vehicle);
 
         return "/RTOResult.jsp";
     }
