@@ -194,7 +194,7 @@ body {
             </div>
             <div class="col-md-6 mb-3">
                 <label for="grown" class="form-label">Grown</label>
-                <select class="form-select" id="grown" name="State">
+                <select class="form-select" id="grown" name="grown">
                     <option value="">Select State</option>
                     <option value="Karnataka"> Karnataka</option>
                     <option value="Andhra">Andhra</option>
@@ -205,8 +205,8 @@ body {
                 </select>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="seedless" class="form-label">Seedless?</label>
-                <select class="form-select" id="seedless" name="seedless">
+                <label for="isSeedless" class="form-label">Seedless?</label>
+                <select class="form-select" id="isSeedless" name="isSeedless">
                     <option value="">Select</option>
                     <option value="true">Yes</option>
                     <option value="false">No</option>

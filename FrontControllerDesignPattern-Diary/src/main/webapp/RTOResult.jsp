@@ -1,6 +1,5 @@
 <%@ page isELIgnored="false" %>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -165,8 +164,7 @@ body {
     </div>
 </nav>
 
-
-<p class="h4 text-success text-center my-4">RTO Details</p>
+<p class="h6 text-success text-center my-4">Hospital Details saved successfully!!</p>
 
 <div class="container d-flex justify-content-center">
     <div class="w-100" style="max-width: 600px">

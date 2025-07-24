@@ -184,15 +184,15 @@ body {
             </div>
             <div class="col-md-6 mb-3">
                 <label for="telephoneNo" class="form-label">TelephoneNo</label>
-                <input type="tel" class="form-control" id="telephoneNo" name="telephoneNo" />
+                <input type="number" class="form-control" id="telephoneNo" name="telephoneNo" />
             </div>
             <div class="col-md-6 mb-3">
                 <label for="state" class="form-label">State</label>
                 <input type="text" class="form-control" id="state" name="state" />
             </div>
             <div class="col-md-6 mb-3">
-                <label for="geepNO" class="form-label">GeepNO</label>
-                <input type="tel" class="form-control" id="geepNO" name="geepNO" />
+                <label for="geepNo" class="form-label">GeepNO</label>
+                <input type="number" class="form-control" id="geepNo" name="geepNo" />
             </div>
             <div class="col-md-6 mb-3">
                 <label for="totalCell" class="form-label">TotalCell</label>

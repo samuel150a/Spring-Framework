@@ -15,6 +15,6 @@ public class DiaryInitializer extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/name","/hospital","/rto","/policeStation"};
+        return new String[]{"/name","/hospital","/rto","/policeStation","/fruit"};
     }
 }

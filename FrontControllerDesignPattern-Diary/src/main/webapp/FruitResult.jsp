@@ -1,3 +1,5 @@
+<%@ page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,7 +165,7 @@ body {
     </div>
 </nav>
 
-<p class="h4 text-success text-center my-4">Fruit Information</p>
+<p class="h6 text-success text-center my-4">Fruit Information saved successfully!!</p>
 
 <div class="container d-flex justify-content-center">
     <div class="w-100" style="max-width: 600px">
@@ -173,41 +175,45 @@ body {
                 <th scope="row">Fruit Name</th>
                 <td>${fruitName}</td>
             </tr>
+
+
+
+
             <tr>
-                <th scope="row">Color</th>
-                <td>${color}</td>
+                <th scope="row">IsRaw</th>
+                <td>${isRaw}</td>
             </tr>
             <tr>
-                <th scope="row">Taste</th>
-                <td>${taste}</td>
+                <th scope="row">Cost</th>
+                <td>${cost}</td>
             </tr>
             <tr>
-                <th scope="row">Season</th>
-                <td>${season}</td>
+                <th scope="row">IsHealthy</th>
+                <td>${isHealthy}</td>
             </tr>
             <tr>
-                <th scope="row">Country of Origin</th>
-                <td>${originCountry}</td>
+                <th scope="row">IsAvaiOnline </th>
+                <td>${isAvaiOnline}</td>
             </tr>
             <tr>
-                <th scope="row">Average Weight (grams)</th>
-                <td>${averageWeight}</td>
+                <th scope="row">FarmArea</th>
+                <td>${farmArea}</td>
             </tr>
             <tr>
-                <th scope="row">Vitamins Present</th>
-                <td>${vitamins}</td>
+                <th scope="row">Grown </th>
+                <td>${grown}</td>
             </tr>
             <tr>
-                <th scope="row">Is Tropical?</th>
-                <td>${isTropical}</td>
+                <th scope="row">IsSeedless?</th>
+                <td>${isSeedless}</td>
             </tr>
             <tr>
-                <th scope="row">Price per Kg</th>
-                <td>${pricePerKg}</td>
+                <th scope="row">Offer</th>
+                <td>${offer}</td>
             </tr>
             <tr>
-                <th scope="row">Exported?</th>
-                <td>${exported}</td>
+                <th scope="row">IsDamaged?</th>
+                <td>${isDamaged}</td>
             </tr>
             </tbody>
         </table>

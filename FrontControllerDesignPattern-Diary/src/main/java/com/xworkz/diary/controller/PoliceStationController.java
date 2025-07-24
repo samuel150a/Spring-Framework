@@ -14,9 +14,9 @@ public class PoliceStationController {
     }
 
     @RequestMapping("/policeStation")
-    public String onPoliceStation(@RequestParam String stationName,@RequestParam String area,@RequestParam String inspector,@RequestParam int telephoneNo,
+    public String onPoliceStation(@RequestParam String stationName,@RequestParam String area,@RequestParam String inspector,@RequestParam String telephoneNo,
                                   @RequestParam String state,@RequestParam int geepNo,@RequestParam int totalCell,@RequestParam String victim,
-                                  @RequestParam String complaintType,@RequestParam String investigationPet, Model mode)
+                                  @RequestParam String complaintType,@RequestParam String investigationPet, Model model)
     {
         System.out.println("PoliceStation form method");
 
@@ -25,22 +25,22 @@ public class PoliceStationController {
         System.out.println("Inspector: "+inspector);
         System.out.println("TelephoneNo: "+telephoneNo);
         System.out.println("State: "+state);
-        System.out.println("GeepNo: "+geepNo);
+        System.out.println("GeepNo:" +geepNo);
         System.out.println("TotalCell: "+totalCell);
         System.out.println("Victim: "+victim);
         System.out.println("ComplaintType: "+complaintType);
         System.out.println("InvestigationPet: "+investigationPet);
 
-        mode.addAttribute("stationName",stationName);
-        mode.addAttribute("area",area);
-        mode.addAttribute("inspector",inspector);
-        mode.addAttribute("telephoneNo",telephoneNo);
-        mode.addAttribute("state",state);
-        mode.addAttribute("geepNo",geepNo);
-        mode.addAttribute("totalCell",totalCell);
-        mode.addAttribute("victim",victim);
-        mode.addAttribute("complaintType",complaintType);
-        mode.addAttribute("investigationPet",investigationPet);
+        model.addAttribute("stationName",stationName);
+        model.addAttribute("area",area);
+        model.addAttribute("inspector",inspector);
+        model.addAttribute("telephoneNo",telephoneNo);
+        model.addAttribute("state",state);
+        model.addAttribute("geepNo",geepNo);
+        model.addAttribute("totalCell",totalCell);
+        model.addAttribute("victim",victim);
+        model.addAttribute("complaintType",complaintType);
+        model.addAttribute("investigationPet",investigationPet);
 
         return "/PoliceStationResult.jsp";
     }

@@ -166,8 +166,8 @@ body {
     </div>
 </nav>
 
+<p class="h6 text-success text-center my-4">Hospital Details saved successfully!!</p>
 
-<p class="h4 text-success text-center my-4">Hospital Details</p>
 
 <div class="container d-flex justify-content-center">
     <div class="w-100" style="max-width: 600px">

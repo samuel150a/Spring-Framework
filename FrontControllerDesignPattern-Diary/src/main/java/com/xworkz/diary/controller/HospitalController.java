@@ -15,7 +15,7 @@ public class HospitalController {
 
     @RequestMapping("/hospital")
     public String sHospital(@RequestParam String hospitalName , @RequestParam String patientName, @RequestParam int age,
-                             @RequestParam String disability, @RequestParam int mobile, @RequestParam String type, Model model)
+                             @RequestParam String disability, @RequestParam String mobile, @RequestParam String type, Model model)
     {
         System.out.println("Hospital form method");
 
