@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-/*1234567891011121314
-*/
 @Getter
 @Setter
 @ToString
