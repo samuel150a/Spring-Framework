@@ -1,10 +1,12 @@
 package com.xworkz.in.service;
 
 import com.xworkz.in.dto.IceCreamShopDto;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class IceCreamShopServiceImple implements IceCreamShopService {
 
 
@@ -24,7 +26,7 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
         }
 
         String name = iceCreamShopDto.getName();
-        if (name != null && (name == "amul") && (name == "nandini")) {
+        if (name != null || (name == "amul") || (name == "nandini")) {
             System.out.println("The Ice is Valid ");
         } else {
             System.out.println("The Ice is not Valid ");
@@ -35,26 +37,27 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
 
 
         String flavour = iceCreamShopDto.getFlavour();
-        if (flavour != null && flavour != "Chocolate") {
-            System.out.println("Flavour is valid");
-        } else {
-            System.out.println("Flavour  is not valid");
+        if (flavour == null ) {
+            System.out.println("Flavour is Invalid");
             return false;
+        } else {
+            System.out.println("Flavour  is  valid");
         }
 
         int quantity = iceCreamShopDto.getQuantity();
 
-        if (quantity <=0 && quantity >= 5) {
+        if (quantity <=0 || quantity >= 5) {
             System.out.println("quantity is not valid");
             return false;
         } else {
             System.out.println("quantity is valid");
         }
-        boolean couponCode=iceCreamShopDto.getCoupon();
-        if(couponCode=!null)
+        String couponCode=iceCreamShopDto.getCoupon();
+        if(couponCode!=null)
         {
             List<String> couponList=couponList();
-            boolean find =couponList.stream().matching(code->code.equals(couponCode));
+            boolean find =couponList.stream().anyMatch
+                    (code->code.equals(couponCode));
             if(find) {
                 System.out.println("code is valid");
             }

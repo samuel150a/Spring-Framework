@@ -26,13 +26,16 @@ public class IceCreamShopController {
         System.out.println(iceCreamShopDto);
 
         if (iceCreamShopService.verify(iceCreamShopDto)) {
+            System.out.println("Details valid");
             model.addAttribute("name", iceCreamShopDto.getName());
-            model.addAttribute("price", getPrice(iceCreamShopDto.getFlavour()));
+            double pri=getPrice(iceCreamShopDto.getFlavour());
+            System.out.println("price: "+pri);
+            model.addAttribute("price", pri);
             return "/OrderSuccess.jsp";
         } else {
             System.out.println("Invalid details");
             model.addAttribute("message", "Invalid details");
-            return "Order.jsp";
+            return "/Order.jsp";
         }
     }
 
@@ -43,7 +46,6 @@ public class IceCreamShopController {
         price.put("Vanilla", 42d);
         price.put("Oreo", 43d);
         price.put("Grapes", 44d);
-
         return price.get(flavour);
     }
 }

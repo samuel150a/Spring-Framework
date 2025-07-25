@@ -4,7 +4,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class SpringInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
 {
-
+public SpringInitializer()
+{
+    System.out.println("SpringInitializer constructor");
+}
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -18,6 +21,6 @@ public class SpringInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/details"};
+        return new String[]{"/"};
     }
 }
