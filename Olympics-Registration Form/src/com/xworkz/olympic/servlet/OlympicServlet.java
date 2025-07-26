@@ -24,6 +24,7 @@ public class OlympicServlet extends HttpServlet
         System.out.println("running in OlympicServlet constructor ");
     }
 
+
     @Override
     protected  void doPost(HttpServletRequest req, HttpServletResponse resp ) throws ServletException, IOException {
         System.out.println("Post method in the OlympicServlet  ");
@@ -54,7 +55,6 @@ public class OlympicServlet extends HttpServlet
 
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("Olympic.jsp");
-
         requestDispatcher.forward(req, resp);
         System.out.println("Successfull");
         System.out.println("########################################################################");
