@@ -72,7 +72,20 @@
     <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
     <label for="flavour">Flavour</label>
-    <input type="text" name="flavour" id="flavour" placeholder="Enter the flavour" required>
+    <select name="flavour" id="flavour" required>
+        <option value="">Select Option</option>
+        <option value="Pista">Pista</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Vanilla">Vanilla</option>
+        <option value="Oreo">Oreo</option>
+        <option value="Grapes">Grapes</option>
+
+
+
+    </select>
+
+
+
 
     <label for="quantity">Quantity</label>
     <input type="number" name="quantity" id="quantity" placeholder="Enter the quantity" min="1" required>
