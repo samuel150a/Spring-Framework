@@ -2,6 +2,7 @@ package com.xworkz.in.controller;
 
 import com.xworkz.in.dto.IceCreamShopDto;
 import com.xworkz.in.service.IceCreamShopService;
+import com.xworkz.in.service.IceCreamShopServiceImple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +18,8 @@ public class IceCreamShopController {
     @Autowired
     private IceCreamShopService iceCreamShopService;
 
-    public IceCreamShopController() {
+    public IceCreamShopController()
+    {
         System.out.println("Running in the IceCreamShopController constructor");
     }
 
@@ -27,11 +29,17 @@ public class IceCreamShopController {
 
         if (iceCreamShopService.verify(iceCreamShopDto)) {
             System.out.println("Details valid");
+
+
+
             model.addAttribute("name", iceCreamShopDto.getName());
-            double pri=getPrice(iceCreamShopDto.getFlavour());
+
+            double pri = iceCreamShopService.getPrice(iceCreamShopDto.getFlavour(), iceCreamShopDto.getQuantity());
+
             System.out.println("price: "+pri);
             model.addAttribute("price", pri);
             return "/OrderSuccess.jsp";
+
         } else {
             System.out.println("Invalid details");
             model.addAttribute("message", "Invalid details");
@@ -39,13 +47,5 @@ public class IceCreamShopController {
         }
     }
 
-    public double getPrice(String flavour) {
-        Map<String, Double> price = new HashMap<>();
-        price.put("Pista", 40d);
-        price.put("Chocolate", 41d);
-        price.put("Vanilla", 42d);
-        price.put("Oreo", 43d);
-        price.put("Grapes", 44d);
-        return price.get(flavour);
-    }
+
 }
