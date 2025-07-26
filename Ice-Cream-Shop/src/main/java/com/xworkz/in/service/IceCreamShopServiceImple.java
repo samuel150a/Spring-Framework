@@ -4,15 +4,20 @@ import com.xworkz.in.dto.IceCreamShopDto;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class IceCreamShopServiceImple implements IceCreamShopService {
 
 
-    public IceCreamShopServiceImple() {
+    public IceCreamShopServiceImple()
+    {
         System.out.println("Running int the IceCreamShopServiceImple constructor ");
     }
+
+
 
     @Override
     public boolean verify(IceCreamShopDto iceCreamShopDto) {
@@ -26,8 +31,9 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
         }
 
         String name = iceCreamShopDto.getName();
-        if (name != null || (name == "amul") || (name == "nandini")) {
+        if (name != null ) {
             System.out.println("The Ice is Valid ");
+
         } else {
             System.out.println("The Ice is not Valid ");
 
@@ -52,6 +58,8 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
         } else {
             System.out.println("quantity is valid");
         }
+
+
         String couponCode=iceCreamShopDto.getCoupon();
         if(couponCode!=null)
         {
@@ -75,8 +83,8 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
             return true;
         }
 
-        public List<String> couponList(){
-        List<String> coupon=new ArrayList<>();
+        public List<String> couponList() {
+            List<String> coupon = new ArrayList<>();
             coupon.add("Hi12");
             coupon.add("Hi13");
             coupon.add("Hi14");
@@ -84,6 +92,18 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
             return coupon;
 
 
+
+    }
+
+    public double getPrice(String flavour,int quantity) {
+        Map<String, Double> price = new HashMap<>();
+        price.put("Pista", 40d);
+        price.put("Chocolate", 41d);
+        price.put("Vanilla", 42d);
+        price.put("Oreo", 43d);
+        price.put("Grapes", 44d);
+         double baseprice= price.getOrDefault(flavour, 0.0);
+         return baseprice*quantity;
 
     }
 }
