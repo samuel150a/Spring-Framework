@@ -18,7 +18,7 @@ public class ExcelReader {
 
             Sheet sheet = workbook.getSheetAt(0);
 
-            for (int i = 1; i <= sheet.getLastRowNum(); i++) { // skip header
+            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
                 Row row = sheet.getRow(i);
                 IceCreamShopDto dto = new IceCreamShopDto();
 
