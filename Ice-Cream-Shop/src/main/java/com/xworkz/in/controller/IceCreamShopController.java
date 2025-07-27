@@ -2,14 +2,10 @@ package com.xworkz.in.controller;
 
 import com.xworkz.in.dto.IceCreamShopDto;
 import com.xworkz.in.service.IceCreamShopService;
-import com.xworkz.in.service.IceCreamShopServiceImple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/")
@@ -30,22 +26,26 @@ public class IceCreamShopController {
         if (iceCreamShopService.verify(iceCreamShopDto)) {
             System.out.println("Details valid");
 
-
+            double basePrice = iceCreamShopService.getPrice(iceCreamShopDto.getFlavour(), iceCreamShopDto.getQuantity());
+            double finalPrice = iceCreamShopService.getDiscountedPrice(iceCreamShopDto);
+            double discountAmount = basePrice - finalPrice;
 
             model.addAttribute("name", iceCreamShopDto.getName());
+            model.addAttribute("basePrice", basePrice);
+            model.addAttribute("discount", discountAmount);
+            model.addAttribute("price", finalPrice);
 
-            double pri = iceCreamShopService.getPrice(iceCreamShopDto.getFlavour(), iceCreamShopDto.getQuantity());
 
-            System.out.println("price: "+pri);
-            model.addAttribute("price", pri);
-            return "/OrderSuccess.jsp";
+
+            return "OrderSuccess";
 
         } else {
             System.out.println("Invalid details");
             model.addAttribute("message", "Invalid details");
-            return "/Order.jsp";
+            return "Order";
         }
+
+        }
+
     }
 
-
-}
