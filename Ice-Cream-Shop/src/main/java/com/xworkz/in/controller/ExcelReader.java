@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ExcelReader {
@@ -17,17 +18,43 @@ public class ExcelReader {
              Workbook workbook = new XSSFWorkbook(fis)) {
 
             Sheet sheet = workbook.getSheetAt(0);
+            Iterator<Row> rowIterator = sheet.iterator();
 
-            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-                Row row = sheet.getRow(i);
+            if (rowIterator.hasNext()) rowIterator.next();
+
+            while (rowIterator.hasNext()) {
+                Row row = rowIterator.next();
+                Iterator<Cell> cellIterator = row.cellIterator();
+
                 IceCreamShopDto dto = new IceCreamShopDto();
+                int cellIndex = 0;
 
-                dto.setName(row.getCell(0).getStringCellValue());
-                dto.setFlavour(row.getCell(1).getStringCellValue());
-                dto.setQuantity((int) row.getCell(2).getNumericCellValue());
-                dto.setCoupon(row.getCell(3).getStringCellValue());
-                dto.setAddOn(row.getCell(4).getStringCellValue());
-                dto.setTakeAway(row.getCell(5).getStringCellValue());
+                while (cellIterator.hasNext()) {
+                    Cell cell = cellIterator.next();
+
+                    switch (cellIndex) {
+                        case 0:
+                            dto.setName(cell.getStringCellValue());
+                            break;
+                        case 1:
+                            dto.setFlavour(cell.getStringCellValue());
+                            break;
+                        case 2:
+                            dto.setQuantity((int) cell.getNumericCellValue());
+                            break;
+                        case 3:
+                            dto.setCoupon(cell.getStringCellValue());
+                            break;
+                        case 4:
+                            dto.setAddOn(cell.getStringCellValue());
+                            break;
+                        case 5:
+                            dto.setTakeAway(cell.getStringCellValue());
+                            break;
+                    }
+
+                    cellIndex++;
+                }
 
                 list.add(dto);
             }
