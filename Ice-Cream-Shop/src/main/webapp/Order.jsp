@@ -71,19 +71,14 @@
     <label for="name">Name</label>
     <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
-    <label for="flavour">Flavour</label>
-    <select name="flavour" id="flavour" required>
-        <option value="">Select Option</option>
-        <option value="Pista">Pista</option>
-        <option value="Chocolate">Chocolate</option>
-        <option value="Vanilla">Vanilla</option>
-        <option value="Oreo">Oreo</option>
-        <option value="Grapes">Grapes</option>
-
-
-
+    <label for="flavour">Choose Ice Cream Flavour:</label>
+    <select id="flavour" name="flavour">
+        <option value="Pista">Pista -    &#8377;40</option>
+        <option value="Chocolate">Chocolate -    &#8377;41</option>
+        <option value="Vanilla">Vanilla -    &#8377;42</option>
+        <option value="Oreo">Oreo -    &#8377;43</option>
+        <option value="Grapes">Grapes -    &#8377;44</option>
     </select>
-
 
 
 
@@ -104,11 +99,34 @@
         <option value="no">No</option>
     </select>
 
+
+
+
+
+
+
     <label for="coupon">Coupon</label>
-    <input type="text" name="coupon" id="coupon"placeholder="Enter the coupon">
+    <div style="display: flex; gap: 10px;">
+        <input type="text" name="coupon" id="coupon" placeholder="Click to generate" >
+        <button type="button" onclick="generateCoupon()">Generate</button>
+    </div>
+
+
 
     <input type="submit" value="Order">
 </form>
+
+<script>
+    function generateCoupon() {
+        const coupons = ["Hi12", "Hi13", "Hi14", "Hi15"];
+        const randomIndex = Math.floor(Math.random() * coupons.length);
+        const selectedCoupon = coupons[randomIndex];
+        document.getElementById("coupon").value = selectedCoupon;
+    }
+</script>
+
+
+
 
 </body>
 </html>
