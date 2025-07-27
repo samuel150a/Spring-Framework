@@ -81,8 +81,25 @@
         <th scope="row">Coupon</th>
         <td>${iceCreamShopDto.coupon}</td>
     </tr>
+
+    <tr>
+        <th scope="row">Base Price</th>
+        <td>Rs. ${basePrice}</td>
+    </tr>
+    <tr>
+        <th scope="row">Discount</th>
+        <td>Rs. ${discount}</td>
+    </tr>
+    <tr>
+        <th scope="row">Final Price</th>
+        <td><strong>Rs. ${price}</strong></td>
+    </tr>
+
+
+
     </tbody>
 </table>
+
 
 <p>Order completed for <strong>${name}</strong>, total amount is <strong>Rs. ${price}</strong></p>
 
