@@ -1,5 +1,6 @@
 package com.xworkz.in.service;
 
+import com.xworkz.in.controller.ExcelReader;
 import com.xworkz.in.dto.IceCreamShopDto;
 import org.springframework.stereotype.Service;
 
@@ -10,25 +11,32 @@ import java.util.Map;
 
 @Service
 public class IceCreamShopServiceImple implements IceCreamShopService {
+    private List<IceCreamShopDto> excelData;
 
 
-    public IceCreamShopServiceImple()
-    {
+    public IceCreamShopServiceImple() {
         System.out.println("Running int the IceCreamShopServiceImple constructor ");
+
+        ExcelReader excelReader = new ExcelReader();
+        this.excelData = excelReader.readIceCreamData("C:/Users/Samuel/Desktop/IceCreamData.xlsx");
+        System.out.println("Loaded Excel Data: " + excelData);
+
     }
-
-
-
     @Override
     public boolean verify(IceCreamShopDto iceCreamShopDto) {
         System.out.println("verify method in the IceCreamShopServiceImple");
+
+
+
         if (iceCreamShopDto != null) {
             System.out.println("IceCreanDto is not null");
         } else {
             System.out.println("IceCreanDto is  null");
 
             return false;
+
         }
+
 
         String name = iceCreamShopDto.getName();
         if (name != null ) {
@@ -61,11 +69,11 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
 
 
         String couponCode=iceCreamShopDto.getCoupon();
-        if(couponCode!=null)
+        if(couponCode!=null|couponCode=="")
         {
             List<String> couponList=couponList();
             boolean find =couponList.stream().anyMatch
-                    (code->code.equals(couponCode));
+                    (code->code.equals(couponCode)|code.equals(""));
             if(find) {
                 System.out.println("code is valid");
             }
@@ -89,6 +97,7 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
             coupon.add("Hi13");
             coupon.add("Hi14");
             coupon.add("Hi15");
+            coupon.add("");
             return coupon;
 
 
@@ -102,8 +111,30 @@ public class IceCreamShopServiceImple implements IceCreamShopService {
         price.put("Vanilla", 42d);
         price.put("Oreo", 43d);
         price.put("Grapes", 44d);
-         double baseprice= price.getOrDefault(flavour, 0.0);
-         return baseprice*quantity;
-
+        double baseprice = price.getOrDefault(flavour, 0.0);
+        return baseprice * quantity;
     }
-}
+        @Override
+        public double getDiscountedPrice(IceCreamShopDto dto) {
+            double basePrice = getPrice(dto.getFlavour(), dto.getQuantity());
+            double discount = 0.0;
+
+            if ("yes".equalsIgnoreCase(dto.getTakeAway())) {
+                discount += 5;
+            }
+
+            if ("yes".equalsIgnoreCase(dto.getAddOn())) {
+                discount += 3;
+            }
+
+            String coupon = dto.getCoupon();
+            if (coupon != null && coupon!="" && couponList().contains(coupon)) {
+                discount += 4;
+            }
+
+            return basePrice - discount;
+        }
+    }
+
+
+
