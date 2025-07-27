@@ -164,7 +164,7 @@ body {
     </div>
 </nav>
 
-<p class="h4 text-success text-center my-4">Police Station Details</p>
+<p class="h6 text-success text-center my-4">Police Station Details saved successfully!!</p>
 
 <div class="container d-flex justify-content-center">
     <div class="w-100" style="max-width: 600px">
@@ -192,7 +192,7 @@ body {
             </tr>
             <tr>
                 <th scope="row">Geepno</th>
-                <td>${geepno}</td>
+                <td>${geepNo}</td>
             </tr>
             <tr>
                 <th scope="row">TotalCell</th>
@@ -215,10 +215,7 @@ body {
     </div>
 </div>
 
-<footer class="text-center text-lg-start py-5" style="background-color: rgb(243, 106, 217)">
-    <div class="text-center text-dark">
-        &copy; 2025 Form Central. All rights reserved.
-    </div>
+
 
 
 
