@@ -20,7 +20,8 @@ public class ExcelReader {
             Sheet sheet = workbook.getSheetAt(0);
             Iterator<Row> rowIterator = sheet.iterator();
 
-            if (rowIterator.hasNext()) rowIterator.next();
+            if (rowIterator.hasNext()) 
+                rowIterator.next();
 
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
