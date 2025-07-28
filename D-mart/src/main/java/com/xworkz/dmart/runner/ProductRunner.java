@@ -1,16 +1,34 @@
 package com.xworkz.dmart.runner;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import com.xworkz.dmart.entity.ProductEntity;
+
+import javax.persistence.*;
+import java.sql.SQLOutput;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ProductRunner {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("x-workz");
-        EntityManager entityManager=entityManagerFactory.createEntityManager();
 
-        EntityTransaction entityTransaction= entityManager.getTransaction();
-        entityTransaction.begin();
+        ProductEntity productEntity=new ProductEntity();
+        productEntity.setName("Mithun A");
+        productEntity.setMfd(LocalDate.parse("2025-02-10"));
+
+
+        productEntity.setPrice(25);
+        productEntity.setCompany("hp");
+        try {
+            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");
+            EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+            EntityTransaction entityTransaction = entityManager.getTransaction();
+            entityTransaction.begin();
+
+            entityManager.persist(productEntity);
+            entityTransaction.commit();
+        } catch (PersistenceException e) {
+            System.out.println(e.getMessage());
+        } finally {
+        }
     }
 }
