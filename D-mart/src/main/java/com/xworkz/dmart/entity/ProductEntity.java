@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -24,7 +25,7 @@ public class ProductEntity {
     private double price;
 
     @Column(name = "product_mfd")
-    private String mfd;
+    private LocalDate mfd;
 
     @Column(name = "product_company")
     private String company;
