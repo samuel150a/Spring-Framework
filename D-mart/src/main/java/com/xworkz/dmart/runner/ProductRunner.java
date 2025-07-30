@@ -13,22 +13,26 @@ public class ProductRunner {
         ProductEntity productEntity=new ProductEntity();
         productEntity.setName("Mithun A");
         productEntity.setMfd(LocalDate.parse("2025-02-10"));
-
-
         productEntity.setPrice(25);
         productEntity.setCompany("hp");
         try {
-            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");
-            EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-            EntityTransaction entityTransaction = entityManager.getTransaction();
+
+            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
+            EntityManager entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
+            EntityTransaction entityTransaction = entityManager.getTransaction();//rollback,autocommit
+
+
+
             entityTransaction.begin();
-
-            entityManager.persist(productEntity);
+            entityManager.persist(productEntity);// inserting
             entityTransaction.commit();
+
+
         } catch (PersistenceException e) {
             System.out.println(e.getMessage());
         } finally {
+
         }
     }
 }
