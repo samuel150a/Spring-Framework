@@ -7,5 +7,6 @@ public interface InteriorRepo {
     public InteriorEntity readInterior(InteriorEntity entity);
     public InteriorEntity updateInterior(InteriorEntity entity);
     public InteriorEntity deleteInterior(InteriorEntity entity);
+    public InteriorEntity getInteriorEntityByName();
 
 }
