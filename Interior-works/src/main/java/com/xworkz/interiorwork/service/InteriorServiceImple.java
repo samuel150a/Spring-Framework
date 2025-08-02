@@ -72,4 +72,9 @@ public class InteriorServiceImple implements InteriorService{
         System.out.println("Running in deleteInterior in serviceimple");
         return interiorRepo.deleteInterior(entity);
     }
+
+    @Override
+    public InteriorEntity getInteriorEntityByName() {
+        return interiorRepo.getInteriorEntityByName();
+    }
 }
