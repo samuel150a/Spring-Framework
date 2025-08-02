@@ -12,7 +12,7 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @ToString
 @Table(name="peacock")
-
+@NamedQuery(name="findByName",query="select a from InteriorEntity a where a.shop='stores'")
 
 public class InteriorEntity {
     @Id
