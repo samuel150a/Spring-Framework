@@ -208,5 +208,50 @@ public InteriorRepoImple()
         return entity;
     }
 
+    @Override
+    public InteriorEntity getInteriorEntityByName() {
+        System.out.println("Running in the getInteriorEntityByName method in Interior repoImple");
+       InteriorEntity entityname =null;
+        try {
+
+            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
+            System.out.println("Connection is established for getInteriorEntityByName operation");
+            entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
+            System.out.println("entity manger is created for Dml operation");
+            entityname=(InteriorEntity) entityManager.createNamedQuery("findByName").getSingleResult();
+
+                System.out.println("Successfully Fetched by name : "+entityname);
+
+
+
+
+            return entityname;
+
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+
+
+        return null;
+    }
+
 
 }
