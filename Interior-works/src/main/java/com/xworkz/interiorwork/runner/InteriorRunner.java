@@ -18,15 +18,17 @@ public class InteriorRunner {
         interiorEntity1.setType("wood");
 
         InteriorService interiorService = new InteriorServiceImple();
-        //interiorService.validation(interiorEntity1);
+
        // interiorService.savedInterior(interiorEntity1);
 
-//        InteriorEntity ref = interiorService.readInterior(interiorEntity1);
-//        System.out.println(("the list of some readed data from Database"));
-//        System.out.println(ref);
+        InteriorEntity ref = interiorService.readInterior(interiorEntity1);
+       System.out.println(("the list of some readed data from Database"));
+       System.out.println(ref);
 
        //interiorService.updateInterior(interiorEntity1);
-        interiorService.deleteInterior(interiorEntity1);
+        //interiorService.deleteInterior(interiorEntity1);
+
+        InteriorEntity get=interiorService.getInteriorEntityByName();
     }
 }
 
