@@ -23,10 +23,10 @@ public class InteriorServiceImple implements InteriorService{
         if (en != null) {
             System.out.println("Data is valid");
 
-            if ("office".equals(en.getVariety())) {
-                System.out.println("Variety is office");
+            if (en.getVariety()!=null) {
+                System.out.println("Variety is valid");
             } else {
-                System.out.println("vareity is not office");
+                System.out.println("vareity is null");
 
             }
 
@@ -74,7 +74,34 @@ public class InteriorServiceImple implements InteriorService{
     }
 
     @Override
-    public InteriorEntity getInteriorEntityByName() {
-        return interiorRepo.getInteriorEntityByName();
+    public InteriorEntity getInteriorEntityByName(String shop) {
+        return interiorRepo.getInteriorEntityByName(shop);
+    }
+
+    @Override
+    public InteriorEntity getInteriorEntityBytype(String type)
+    {
+        return interiorRepo.getInteriorEntityBytype(type);
+    }
+
+    @Override
+    public InteriorEntity getInteriorEntityByvariety(String variety) {
+
+        return interiorRepo.getInteriorEntityByvariety(variety);
+    }
+
+    @Override
+    public InteriorEntity getInteriorEntityBywood(boolean wood) {
+        return interiorRepo.getInteriorEntityBywood(wood);
+    }
+
+    @Override
+    public InteriorEntity getInteriorEntityByPrice(Integer price) {
+        return interiorRepo.getInteriorEntityByPrice(price);
+    }
+
+    @Override
+    public InteriorEntity getInteriorEntityBydoordelivery(String doordelivery) {
+        return interiorRepo.getInteriorEntityBydoordelivery(doordelivery);
     }
 }
