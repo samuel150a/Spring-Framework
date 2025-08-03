@@ -11,7 +11,7 @@ public class InteriorRunner {
         InteriorEntity interiorEntity1 = new InteriorEntity();
 
         interiorEntity1.setShop("Design me");
-        interiorEntity1.setWood(true);
+        interiorEntity1.setWood(false);
         interiorEntity1.setPrice(500);
         interiorEntity1.setDoordelivery("no");
         interiorEntity1.setVariety("office");
@@ -28,7 +28,13 @@ public class InteriorRunner {
        //interiorService.updateInterior(interiorEntity1);
         //interiorService.deleteInterior(interiorEntity1);
 
-        InteriorEntity get=interiorService.getInteriorEntityByName();
+        //interiorService.getInteriorEntityByName("shop2");
+       //interiorService.getInteriorEntityBytype("chigo");
+        //interiorService.getInteriorEntityByvariety("hotel");
+        //interiorService.getInteriorEntityBywood(false);
+        //interiorService.getInteriorEntityByPrice(1250);
+        interiorService.getInteriorEntityBydoordelivery("yes but Extra fee");
+
     }
 }
 
