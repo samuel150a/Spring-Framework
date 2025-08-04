@@ -12,13 +12,20 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @ToString
 @Table(name="peacock")
+@NamedQuery(name = "fetchAllInterior", query = "SELECT i FROM InteriorEntity i")
+
 //@NamedQuery(name="findByName",query="select a from InteriorEntity a where a.shop='stores'")
-@NamedQuery(name="type",query="select a from InteriorEntity a where a.type=:type")
-@NamedQuery(name="shop",query="select a  from InteriorEntity a where a.shop=:shop")
-@NamedQuery(name="variety",query="select a from InteriorEntity a where a.variety=:variety")
-@NamedQuery(name="wood",query="select a from InteriorEntity a where a.wood=:wood")
-@NamedQuery(name="price",query ="select a from InteriorEntity a where a.price=:price")
+//@NamedQuery(name="type",query="select a from InteriorEntity a where a.type=:type")
+//@NamedQuery(name="shop",query="select a  from InteriorEntity a where a.shop=:shop")
+//@NamedQuery(name="variety",query="select a from InteriorEntity a where a.variety=:variety")
+//@NamedQuery(name="wood",query="select a from InteriorEntity a where a.wood=:wood")
+
+// 4 named query
 @NamedQuery(name="doordelivery",query = "select a from InteriorEntity a where a.doordelivery=:doordelivery")
+@NamedQuery(name="entitySpecificType",query = "select a from InteriorEntity a where a.type='wood'")
+@NamedQuery(name="entitySpecificvariety",query="select v from InteriorEntity v where v.variety='hotel'")
+@NamedQuery(name="getprice",query ="select z from InteriorEntity z where z.price=:price")
+@NamedQuery(name="entityDoorDelivery",query ="select d from InteriorEntity d where d.doordelivery=:doordelivery")
 
 public class InteriorEntity {
     @Id
