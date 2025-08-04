@@ -16,15 +16,15 @@ public class BakeryUpdate {
         entityTransaction=entityManager.getTransaction();
 
         try{
-            entityTransaction.begin();
+
             BakeryEntity updt=entityManager.find(BakeryEntity.class,1);
             if(updt!=null)
             {
-                updt.setItem("water");
+                updt.setItem("chips");
                 System.out.println(updt);
             }
 
-            entityTransaction.commit();
+
         }
         catch(PersistenceException e){
             if(entityTransaction!=null)
