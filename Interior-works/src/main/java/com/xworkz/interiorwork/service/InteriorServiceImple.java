@@ -5,6 +5,9 @@ import com.xworkz.interiorwork.repository.InteriorRepo;
 import com.xworkz.interiorwork.repository.InteriorRepoImple;
 import com.xworkz.interiorwork.runner.InteriorRunner;
 
+import java.util.Collections;
+import java.util.List;
+
 import static sun.plugin2.liveconnect.ArgumentHelper.validate;
 
 public class InteriorServiceImple implements InteriorService{
@@ -13,6 +16,7 @@ public class InteriorServiceImple implements InteriorService{
 
     public InteriorServiceImple()
     {
+
         System.out.println("running in InteriorServiceImple constructor");
     }
 
@@ -103,5 +107,20 @@ public class InteriorServiceImple implements InteriorService{
     @Override
     public InteriorEntity getInteriorEntityBydoordelivery(String doordelivery) {
         return interiorRepo.getInteriorEntityBydoordelivery(doordelivery);
+    }
+
+    @Override
+    public List<InteriorEntity> fetchAllInterior(InteriorEntity entity) {
+        return interiorRepo.fetchAllInterior(entity);
+    }
+
+    @Override
+    public List<InteriorEntity> getBySpecifictype(String entity) {
+        return interiorRepo.getBySpecifictype(entity);
+    }
+
+    @Override
+    public List<InteriorEntity> getBYSpecificvariety(String entity) {
+        return interiorRepo.getBYSpecificvariety(entity);
     }
 }
