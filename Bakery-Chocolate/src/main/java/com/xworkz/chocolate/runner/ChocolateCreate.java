@@ -34,8 +34,6 @@ public class ChocolateCreate {
                 entityManager.close();
             }
 
-
-
         }
     }
 }
