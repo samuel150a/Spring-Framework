@@ -5,6 +5,7 @@ import com.xworkz.interiorwork.service.InteriorService;
 import com.xworkz.interiorwork.service.InteriorServiceImple;
 
 import javax.persistence.*;
+import java.util.List;
 
 public class InteriorRunner {
     public static void main(String[] args) {
@@ -19,24 +20,36 @@ public class InteriorRunner {
 
         InteriorService interiorService = new InteriorServiceImple();
 
-       // interiorService.savedInterior(interiorEntity1);
+        // interiorService.savedInterior(interiorEntity1);
 
         InteriorEntity ref = interiorService.readInterior(interiorEntity1);
-       System.out.println(("the list of some readed data from Database"));
-       System.out.println(ref);
+        System.out.println(("the list of some readed data from Database"));
+        System.out.println(ref);
 
-       //interiorService.updateInterior(interiorEntity1);
+        //interiorService.updateInterior(interiorEntity1);
         //interiorService.deleteInterior(interiorEntity1);
 
-        //interiorService.getInteriorEntityByName("shop2");
-       //interiorService.getInteriorEntityBytype("chigo");
+
+        //interiorService.getInteriorEntityBytype("chigo");
         //interiorService.getInteriorEntityByvariety("hotel");
         //interiorService.getInteriorEntityBywood(false);
-        //interiorService.getInteriorEntityByPrice(1250);
-        interiorService.getInteriorEntityBydoordelivery("yes but Extra fee");
 
-    }
-}
+//        List<InteriorEntity> disp = interiorService.fetchAllInterior(interiorEntity1);
+//        for (InteriorEntity e : disp) {
+//            System.out.println(e);
+//        }
 
+        List<InteriorEntity> disp1 = interiorService.getBySpecifictype("wood");
+        for (InteriorEntity e1 : disp1) {
+            System.out.println(e1);
+        }
+            List<InteriorEntity> disp2 = interiorService.getBYSpecificvariety("hotel");
+            for (InteriorEntity e2 : disp2) {
+                System.out.println(e2);
+            }
+                interiorService.getInteriorEntityByPrice(250);
+                interiorService.getInteriorEntityBydoordelivery("yeah");
+            }
 
+        }
 
