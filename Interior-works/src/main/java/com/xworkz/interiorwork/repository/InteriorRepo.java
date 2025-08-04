@@ -2,6 +2,8 @@ package com.xworkz.interiorwork.repository;
 
 import com.xworkz.interiorwork.entity.InteriorEntity;
 
+import java.util.List;
+
 public interface InteriorRepo {
     public void savedInterior(InteriorEntity entity);
     public InteriorEntity readInterior(InteriorEntity entity);
@@ -11,6 +13,12 @@ public interface InteriorRepo {
     public InteriorEntity getInteriorEntityBytype(String type);
     public InteriorEntity getInteriorEntityByvariety(String variety);
     public InteriorEntity getInteriorEntityBywood(boolean wood);
+
+     List<InteriorEntity> fetchAllInterior(InteriorEntity entity);
+
+     //4 methods
+    List<InteriorEntity> getBySpecifictype(String entity);
+    List<InteriorEntity> getBYSpecificvariety(String entity);
     public InteriorEntity getInteriorEntityByPrice(Integer price);
     public InteriorEntity getInteriorEntityBydoordelivery(String doordelivery);
 
