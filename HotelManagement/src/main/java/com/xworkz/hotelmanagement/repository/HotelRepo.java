@@ -18,5 +18,10 @@ public interface HotelRepo {
     public List<HotelEntity> getHotelEntityByDish(String dish);
     public List<HotelEntity> getHotelEntityByPrice(Integer price);
 
+    //5-08-25
+
+    HotelEntity updateTheDish(String updatedish,String name,Integer id);
+    HotelEntity updateTheName(String updatedName,String dish,Integer id);
+    HotelEntity UpdateThePrice(Integer updatedPrice,String feedback,Integer id);
 }
 
