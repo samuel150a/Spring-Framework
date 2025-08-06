@@ -7,6 +7,7 @@ import com.xworkz.interiorwork.service.InteriorServiceImple;
 import javax.persistence.*;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class InteriorRepoImple implements InteriorRepo {
@@ -14,7 +15,8 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("running in the InteriorRepoImple constructor");
     }
 
-    EntityManagerFactory entityManagerFactory = null;
+
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");
     EntityManager entityManager = null;
     EntityTransaction entityTransaction = null;
 
@@ -23,7 +25,6 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("running in saveInterior method repoimple");
 
         try {
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for save operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -73,7 +74,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for read operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -111,7 +111,6 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("running in updateInterior in repoimple class");
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for update operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -158,7 +157,6 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("running in the deleteInterior method updateInterior");
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for delete operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -207,7 +205,6 @@ public class InteriorRepoImple implements InteriorRepo {
         InteriorEntity entityname = null;
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityByName operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -251,7 +248,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityBytype operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -295,7 +291,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityByvariety operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -339,7 +334,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityBywood operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -382,7 +376,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityByPrice operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -427,12 +420,11 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getInteriorEntityBydoordelivery operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
-            Query query =  entityManager.createNamedQuery("doordelivery");
-            entitydoordelivery=(InteriorEntity)query.setParameter("doordelivery", doordelivery).getSingleResult();
+            Query query = entityManager.createNamedQuery("doordelivery");
+            entitydoordelivery = (InteriorEntity) query.setParameter("doordelivery", doordelivery).getSingleResult();
             System.out.println("Successfully Fetched by name : " + entitydoordelivery);
 
 
@@ -464,6 +456,7 @@ public class InteriorRepoImple implements InteriorRepo {
         return null;
     }
 
+
     @Override
     public List<InteriorEntity> fetchAllInterior(InteriorEntity entity) {
         System.out.println("Running in the fetchAllInterior method in Interior repoImple");
@@ -471,7 +464,6 @@ public class InteriorRepoImple implements InteriorRepo {
 
         try {
 
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for fetchAllInterior operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -514,7 +506,6 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("Running in getBySpecifictype RepoImle");
         List<InteriorEntity> entitySpecificType = null;
         try {
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");//load,register,connection
             System.out.println("Connection is established for getBySpecifictype operation");
             entityManager = entityManagerFactory.createEntityManager();// dml(ins,up,del),DQL(select)
             System.out.println("entity manger is created for Dml operation");
@@ -555,7 +546,6 @@ public class InteriorRepoImple implements InteriorRepo {
         System.out.println("Running in getBYSpecificvariety method in repoImple ");
         List<InteriorEntity> entitySpecificvariety = null;
         try {
-            entityManagerFactory = Persistence.createEntityManagerFactory("x-workz");
             System.out.println("Connection as been established for getBYSpecificvariety");
             entityManager = entityManagerFactory.createEntityManager();
             System.out.println("entity manger is created dml operation");
@@ -590,6 +580,299 @@ public class InteriorRepoImple implements InteriorRepo {
 
 
     }
-}
 
+    @Override
+    public InteriorEntity findByNameByTypedQuery(String n) {
+        System.out.println("Running in the findByNameByTypedQuery in repoImple");
+        InteriorEntity nameByTypedQuery = null;
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            entityTransaction = entityManager.getTransaction();
+            TypedQuery<InteriorEntity> query = entityManager.createQuery("select a from InteriorEntity a where a.shop=:Storesza", InteriorEntity.class).setParameter("Storesza", n);
+            nameByTypedQuery = query.getSingleResult();
+            System.out.println(nameByTypedQuery);
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+
+
+        return null;
+    }
+
+    @Override
+    public InteriorEntity updateById(String updatedType, String updatedShop, Integer Id) {
+        System.out.println("running in the updateById method ");
+        InteriorEntity interiorEntity = null;
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            entityTransaction = entityManager.getTransaction();
+
+
+            entityTransaction.begin();
+
+            Query query = entityManager.createNamedQuery("updateById")
+                    .setParameter("type", updatedType).setParameter("shop", updatedShop)
+                    .setParameter("ID", Id);
+            //System.out.println(query);
+            int i = query.executeUpdate();
+            System.out.println("updated value" + i);
+            interiorEntity = entityManager.find(InteriorEntity.class, Id);
+
+            entityTransaction.commit();
+            System.out.println(interiorEntity);
+
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+
+
+        return interiorEntity;
+
+
+    }
+
+    @Override
+    public InteriorEntity updateByPrice(String updatedVariety, Integer Price) {
+        System.out.println("Running in the updateByPrice method in repoImlpe");
+        InteriorEntity interiorEntityUpdatedPrice = null;
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            entityTransaction = entityManager.getTransaction();
+
+            entityTransaction.begin();
+            Query query = entityManager.createNamedQuery("updateByPrice")
+                    .setParameter("variety", updatedVariety)
+                    .setParameter("price", Price);
+            int updated = query.executeUpdate();
+            interiorEntityUpdatedPrice = entityManager.find(InteriorEntity.class, Price);
+
+            entityTransaction.commit();
+            System.out.println(updated);
+
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return interiorEntityUpdatedPrice;
+
+    }
+
+    @Override
+    public InteriorEntity updateByShop(Boolean updateWood, String updateShop, Integer Id) {
+        System.out.println("running in updateByShop method ");
+        InteriorEntity entityupdateByShop = null;
+
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            entityTransaction = entityManager.getTransaction();
+            entityTransaction.begin();
+            Query query = entityManager.createNamedQuery("updateByShop")
+                    .setParameter("wood", updateWood)
+                    .setParameter("shop", updateShop)
+                    .setParameter("ID", Id);
+            int updated = query.executeUpdate();
+            entityupdateByShop = entityManager.find(InteriorEntity.class, Id);
+            entityTransaction.commit();
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return entityupdateByShop;
+    }
+
+    @Override
+    public List<String> getAllVarietynames() {
+        System.out.println("running in the getAllVarietynames method");
+        List<String> getAllVarietynamesEntity = null;
+        try {
+
+            entityManager = entityManagerFactory.createEntityManager();
+            Query query = entityManager.createNamedQuery("getAllVarietynames");
+            getAllVarietynamesEntity = query.getResultList();
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return getAllVarietynamesEntity;
+    }
+
+    @Override
+    public List<Integer> getAllPrice() {
+        System.out.println("running in the getAllPrice method");
+        List<Integer> getAllPrice = null;
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            Query query = entityManager.createNamedQuery("getAllPrice");
+            getAllPrice = query.getResultList();
+
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            if (entityTransaction != null) {
+                entityTransaction.rollback();
+                System.out.println("Due to Exception rollback is done");
+            }
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return getAllPrice;
+    }
+
+    @Override
+    public List<Object> getAllWood() {
+        System.out.println("running in the getAllWood");
+        List<Object> getAllWood = null;
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+            Query query = entityManager.createNamedQuery("getAllWood");
+            getAllWood = query.getResultList();
+        } catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+
+        } finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return getAllWood;
+    }
+
+    @Override
+    public List<Object[]> FetchTwoColumns() {
+        System.out.println("Running in the FetchTwoColumns");
+        List<Object[]> FetchTwoColumns = null;
+
+        try {
+            FetchTwoColumns = entityManagerFactory.createEntityManager().createNamedQuery("FetchTwoColumns").getResultList();
+        }
+
+        catch (PersistenceException e) {
+            System.out.println("Exception has been found");
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+
+        }
+        finally {
+            if (entityManagerFactory != null) {
+                entityManagerFactory.close();
+                System.out.println("entityManagerFactory is closed");
+            }
+            if (entityManager != null) {
+                entityManager.close();
+                System.out.println("entityManager is closed");
+            }
+
+
+        }
+        return FetchTwoColumns;
+
+
+    }
+
+}
 
