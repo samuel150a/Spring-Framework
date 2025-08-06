@@ -15,7 +15,7 @@
                     <a class="nav-link active text-white" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Order.jsp">Upload</a>
+                    <a class="nav-link text-white" href="WEB-INF/Order.jsp">Upload</a>
                 </li>
             </ul>
         </div>
@@ -25,7 +25,7 @@
 <div class="container text-center mt-5">
     <h2>Welcome to the Placement File Upload Portal</h2>
     <p class="lead">Submit your placement documents easily.</p>
-    <a href="Order.jsp" class="btn btn-success mt-3">Upload Now</a>
+    <a href="/order" class="btn btn-success mt-3">Upload Now</a>
 </div>
 
 <footer class="text-center text-white py-3 mt-5 bg-success">
