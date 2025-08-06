@@ -69,4 +69,19 @@ public class HotelServiceImple implements HotelService {
     public List<HotelEntity> getHotelEntityByPrice(Integer price) {
         return hotelRepo.getHotelEntityByPrice(price);
     }
+
+    @Override
+    public HotelEntity updateTheDish(String updatedish, String name, Integer id) {
+        return hotelRepo.updateTheDish(updatedish,name,id);
+    }
+
+    @Override
+    public HotelEntity updateTheName(String updatedName, String dish, Integer id) {
+        return hotelRepo.updateTheName(updatedName,dish,id);
+    }
+
+    @Override
+    public HotelEntity UpdateThePrice(Integer updatedPrice, String feedback, Integer id) {
+        return hotelRepo.UpdateThePrice(updatedPrice,feedback,id);
+    }
 }
