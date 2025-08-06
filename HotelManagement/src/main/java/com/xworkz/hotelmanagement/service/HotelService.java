@@ -17,4 +17,10 @@ public interface HotelService {
     public HotelEntity getHotelEntityByFeedback(String feedback);
     List<HotelEntity> getHotelEntityByDish(String dish);
     public List<HotelEntity> getHotelEntityByPrice(Integer price);
+    HotelEntity updateTheDish(String updatedish,String name,Integer id);
+    //05-08/2025
+    HotelEntity updateTheName(String updatedName,String dish,Integer id);
+    HotelEntity UpdateThePrice(Integer updatedPrice,String feedback,Integer id);
+
+
 }
