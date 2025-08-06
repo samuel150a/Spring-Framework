@@ -14,9 +14,6 @@ public class PlacementDto {
     @Size(min = 3, max = 30)
     private String name;
 
-    @NotBlank
-    @Email
-    private String email;
 
     private MultipartFile multipartFile;
 }
