@@ -35,11 +35,20 @@ public class HotelRunner {
 //        {
 //            System.out.println(e);
 //        }
-        List<HotelEntity> ref2 =hotelService.getHotelEntityByPrice(200);
-        for(HotelEntity e:ref2)
-        {
-            System.out.println(e);
-        }
+//        List<HotelEntity> ref2 =hotelService.getHotelEntityByPrice(200);
+//        for(HotelEntity e:ref2)
+//        {
+//            System.out.println(e);
+//        }
+
+        //05-08-25
+        //HotelEntity updated=hotelService.updateTheDish("chickenchops","Taj",1);
+        //HotelEntity updatedTheName=hotelService.updateTheName("Kashmiri","biryani",2);
+        HotelEntity updateByPrice=hotelService.UpdateThePrice(600,"ok",4);
+
+
+
+
 
     }
 }
