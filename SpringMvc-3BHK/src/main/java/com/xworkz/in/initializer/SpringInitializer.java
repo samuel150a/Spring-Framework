@@ -5,7 +5,7 @@ import com.xworkz.in.configure.Configure;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class SpringInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
-{
+{//,
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
